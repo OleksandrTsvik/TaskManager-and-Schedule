@@ -1,0 +1,12 @@
+div.wrapper-card {
+    padding: 0.5rem;
+}
+div.wrapper-card div.card div.collapsible {
+    display: none;
+    height: 0;
+    border-top: 1px solid #dfdfdf;
+}
+
+.gap-05 {
+    gap: 0.5rem;
+}

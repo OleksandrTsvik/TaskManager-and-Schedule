@@ -1,0 +1,16 @@
+{{#if tasks}}
+    {{> tasks tasks=tasks buttons=true }}
+{{ else }}
+    <h3 class="text-center text-light bg-success py-3">There are no tasks</h3>
+{{/if }}
+
+{{#if completedTasks}}
+    <hr>
+    <h3 class="text-center text-light bg-info py-3">Completed</h3>
+    {{> tasks tasks=completedTasks completedTask=true buttons=true }}
+{{/if }}
+
+{{#if (comparison (comparison tasks.length '>' 0) '||' (comparison completedTasks.length '>' 0)) }}
+    {{> modal-edit-task }}
+    {{> modal-delete-task }}
+{{/if}}

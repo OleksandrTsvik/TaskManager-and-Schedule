@@ -1,0 +1,56 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light p-0">
+    <div class="container-fluid justify-content-between">
+        <!-- Left elements -->
+        <div class="d-flex">
+            <a class="navbar-brand" href="/">Task Manager</a>
+        </div>
+        <!-- Left elements -->
+
+        <!-- Center elements -->
+        <ul class="navbar-nav flex-row d-flex">
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="/">
+                    <span><i class="fas fa-tasks fa-2x text-primary"></i></span>
+                    {{#if (comparison tasks.length '>' 0) }}
+                        <span class="badge rounded-pill badge-notification bg-danger">{{ tasks.length }}</span>
+                    {{/if}}
+                </a>
+            </li>
+
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="/completed">
+                    <span><i class="fas fa-check fa-2x text-success"></i></span>
+                </a>
+            </li>
+
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="/not-completed">
+                    <span><i class="fas fa-times fa-2x text-warning"></i></span>
+                </a>
+            </li>
+
+<!--            <li class="nav-item me-3 me-lg-1">-->
+<!--                <a class="nav-link" href="#">-->
+<!--                    <span><i class="fas fa-history fa-2x text-secondary"></i></span>-->
+<!--                </a>-->
+<!--            </li>-->
+        </ul>
+        <!-- Center elements -->
+
+        <!-- Right elements -->
+        <ul class="navbar-nav flex-row">
+            <li class="nav-item me-3 me-lg-1"
+                data-mdb-toggle="modal"
+                data-mdb-target="#modal-add-task"
+                id="add-task"
+            >
+                <a class="nav-link" type="button">
+                    <span><i class="fas fa-plus-circle fa-2x text-dark"></i></span>
+                </a>
+            </li>
+        </ul>
+        <!-- Right elements -->
+    </div>
+</nav>
+
+{{> modal-add-task }}
