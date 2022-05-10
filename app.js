@@ -2,13 +2,13 @@ const express = require('express');
 const expressHbs = require('express-handlebars');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
-const moment = require('moment');
 
 const connectDB = require('./db/mongoose');
 const taskRouter = require('./routers/task');
 const headingRouter = require('./routers/heading');
 
 const { PORT, URL } = require('./config/config');
+const helpers = require('./config/helpers');
 
 const app = express();
 
@@ -16,31 +16,7 @@ app.engine('hbs', expressHbs.engine({
     layoutsDir: 'views/layouts',
     defaultLayout: 'layout',
     extname: 'hbs',
-    helpers : {
-        dateFormat: (date, options) => moment(date).format(options),
-        comparison: (p1, op, p2) => {
-            switch (op) {
-                case '===':
-                    return p1 === p2;
-                case '!==':
-                    return p1 !== p2;
-                case '<':
-                    return p1 < p2;
-                case '<=':
-                    return p1 <= p2;
-                case '>':
-                    return p1 > p2;
-                case '>=':
-                    return p1 >= p2;
-                case '&&':
-                    return p1 && p2;
-                case '||':
-                    return p1 || p2;
-                default:
-                    return false;
-            }
-        }
-    }
+    helpers: helpers
 }));
 
 app.set('view engine', 'hbs');
