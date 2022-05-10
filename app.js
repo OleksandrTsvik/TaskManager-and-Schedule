@@ -6,6 +6,7 @@ const moment = require('moment');
 
 const connectDB = require('./db/mongoose');
 const taskRouter = require('./routers/task');
+const headingRouter = require('./routers/heading');
 
 const { PORT, URL } = require('./config/config');
 
@@ -53,6 +54,7 @@ app.use(bodyParser.json());
 
 // app.use(express.json());
 app.use(taskRouter);
+app.use(headingRouter);
 
 connectDB()
     .then(() => {

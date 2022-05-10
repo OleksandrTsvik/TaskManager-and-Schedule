@@ -7,6 +7,17 @@ div.wrapper-card div.card div.collapsible {
     border-top: 1px solid #dfdfdf;
 }
 
+table.table-heading th,
+table.table-heading td {
+    vertical-align: middle;
+}
+.table-heading tr:first-of-type th:last-of-type {
+    width: 180px;
+}
+
 .gap-05 {
     gap: 0.5rem;
+}
+.text-no-transform {
+    text-transform: none;
 }

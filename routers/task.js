@@ -1,18 +1,22 @@
 const express = require('express');
 
 const Task = require('../models/task');
+const Heading = require('../models/heading');
 
 const router = new express.Router();
 
 router.get('/', async (req, res) => {
     try {
+        let heads = await Heading.find({}).lean();
+
         let tasks = await Task.find({ completed: false }).lean();
         let completedTasks = await Task.find({ completed: true }).lean();
 
         res.render('index.hbs', {
             title: 'Task Manager',
-            tasks: tasks,
-            completedTasks: completedTasks
+            tasks,
+            completedTasks,
+            heads
         });
     } catch (err) {
         res.status(400).send();
@@ -21,11 +25,18 @@ router.get('/', async (req, res) => {
 
 router.get('/completed', async (req, res) => {
     try {
-        let tasks = await Task.find({ completed: true }).lean();
+        let heads = await Heading.find({}).lean();
+
+        let tasks = await Task.find({}).lean();
+        let tasksCompleted = tasks.filter(task => task.completed);
+
+        tasks = tasks.filter(task => !task.completed);
 
         res.render('completed.hbs', {
             title: 'Completed Tasks',
-            tasks: tasks
+            tasks,
+            tasksCompleted,
+            heads
         });
     } catch (err) {
         res.status(400).send();
@@ -34,11 +45,14 @@ router.get('/completed', async (req, res) => {
 
 router.get('/not-completed', async (req, res) => {
     try {
+        let heads = await Heading.find({}).lean();
+
         let tasks = await Task.find({ completed: false }).lean();
 
         res.render('not-completed.hbs', {
             title: 'Not Completed Tasks',
-            tasks: tasks
+            tasks,
+            heads
         });
     } catch (err) {
         res.status(400).send();
@@ -81,7 +95,6 @@ router.get('/task/:id', async (req, res) => {
 });
 
 router.post('/task/:id', async (req, res) => {
-    console.log(req.body)
     switch (req.query.operation) {
         case 'edit':
             await Task.updateOne({_id: req.params.id}, {$set: req.body});

@@ -8,13 +8,19 @@
             <div class="modal-body p-4">
                 <form method="post" action="/">
                     <div class="form-outline mb-4">
-                        <input type="text" name="title" id="title" class="form-control">
+                        <input type="text" name="title" id="title" class="form-control" list="list-add-title">
                         <label class="form-label" for="title" style="margin-left: 0;">Title</label>
                         <div class="form-notch">
                             <div class="form-notch-leading" style="width: 9px;"></div>
                             <div class="form-notch-middle" style="width: 8px;"></div>
                             <div class="form-notch-trailing"></div>
                         </div>
+
+                        <datalist id="list-add-title">
+                            {{#each heads }}
+                                <option value="{{ this.text }}">
+                            {{/each}}
+                        </datalist>
                     </div>
 
                     <div class="form-outline mb-4">

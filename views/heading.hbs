@@ -1,0 +1,45 @@
+<div class="text-center my-2">
+    <button class="btn btn-outline-primary text-no-transform fw-bold fa-1x"
+            data-mdb-toggle="modal"
+            data-mdb-target="#modal-heading"
+            id="add-heading"
+    >
+        Add heading
+    </button>
+
+    {{> modal-heading }}
+</div>
+
+{{#if heads }}
+    <table class="table table-striped table-hover table-heading my-3">
+        <tr class="bg-dark">
+            <th class="text-light fw-bold font-monospace">Title</th>
+            <th></th>
+        </tr>
+        {{#each heads}}
+            <tr>
+                <td>{{ this.text }}</td>
+                <td data-heading-id="{{ this._id }}">
+                    <button class="btn btn-primary btn-edit"
+                            data-mdb-toggle="modal"
+                            data-mdb-target="#modal-heading"
+                    >
+                        <i class="fas fa-pencil-alt fa-lg"></i>
+                    </button>
+                    <button class="btn btn-danger btn-delete"
+                            data-mdb-toggle="modal"
+                            data-mdb-target="#modal-delete-heading"
+                    >
+                        <i class="fas fa-trash-alt fa-lg"></i>
+                    </button>
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+
+    {{> modal-delete-heading }}
+{{ else }}
+    <h2 class="py-3 text-center bg-primary text-light">No headlines</h2>
+{{/if}}
+
+<script src="/static/js/heading.js" type="module"></script>
