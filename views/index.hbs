@@ -4,16 +4,17 @@
     <h3 class="text-center text-light bg-success py-3">There are no tasks</h3>
 {{/if }}
 
-{{#if completedTasks}}
+{{#if tasksCompleted }}
     <hr>
     <h3 class="text-center text-light bg-info py-3">Completed</h3>
-    {{> tasks tasks=completedTasks completedTask=true buttons=true }}
+    {{> tasks tasks=tasksCompleted isTaskCompleted=true buttons=true }}
 {{/if }}
 
-{{#if (comparison (comparison tasks.length '>' 0) '||' (comparison completedTasks.length '>' 0)) }}
+{{#if (comparison tasks '||' tasksCompleted) }}
     {{> modal-edit-task }}
     {{> modal-delete-task }}
 {{/if}}
 
 <script src="/static/js/change-color.js" type="module"></script>
 <script src="/static/js/task.js" type="module"></script>
+<script src="/static/js/drag-and-drop-tasks.js" type="module"></script>

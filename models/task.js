@@ -1,6 +1,6 @@
 const mongosse = require('mongoose');
 
-const Task = mongosse.model('Task', {
+const taskSchema = new mongosse.Schema({
     title: {
         type: String,
         required: true,
@@ -32,7 +32,13 @@ const Task = mongosse.model('Task', {
     dateCreation: {
         type: Date,
         default: new Date()
+    },
+    position: {
+        type: Number,
+        default: Number.MAX_VALUE
     }
 });
+
+const Task = mongosse.model('Task', taskSchema);
 
 module.exports = Task;

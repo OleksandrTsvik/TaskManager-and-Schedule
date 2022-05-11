@@ -1,9 +1,12 @@
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-3" id="tasks">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-3{{#if (isNotCompletedTasks tasks) }} container-draggable{{/if}}">
     {{#each tasks }}
-        <div class="wrapper-card">
+        <div class="wrapper-card" data-task-id="{{ this._id }}">
             <div class="card border border-primary shadow-0" style="background-color: {{ this.backgroundColor }}; color: {{ this.color }};">
-                <div class="card-header">
+                <div class="card-header{{#if (isNotCompletedTasks ../tasks) }} d-flex align-content-center justify-content-between{{/if}}">
                     <h5 class="card-title m-0">{{ this.title }}</h5>
+                    {{#if (isNotCompletedTasks ../tasks) }}
+                        <div class="grip-draggable"><i class="fas fa-grip-horizontal fa-lg"></i></div>
+                    {{/if}}
                 </div>
                 <div class="card-body">
                     <p class="card-text">{{ this.description }}</p>
@@ -11,8 +14,8 @@
                 {{#if ../buttons }}
                     <div class="card-footer d-flex justify-content-between align-items-center gap-05">
                         <div class="date">{{dateFormat this.dateCreation "DD.MM.YYYY HH:mm"}}</div>
-                        <div class="buttons d-flex flex-wrap justify-content-end align-items-center gap-05" data-task-id="{{ this._id }}">
-                            {{#if ../completedTask }}
+                        <div class="buttons d-flex flex-wrap justify-content-end align-items-center gap-05">
+                            {{#if ../isTaskCompleted }}
                                 <button class="btn btn-outline-warning btn-floating btn-not-completed">
                                     <i class="fas fa-times fa-lg"></i>
                                 </button>
@@ -38,7 +41,7 @@
                             </button>
                         </div>
                     </div>
-                    <div class="collapsible px-4 py-2" data-task-id="{{ this._id }}">
+                    <div class="collapsible px-4 py-2">
                         <div class="d-flex align-items-center gap-05 mb-2">
                             Колір тексту:
                             <input type="color" value="{{ this.color }}" class="flex-grow-1 text-color" />

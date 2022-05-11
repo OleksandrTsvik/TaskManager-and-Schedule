@@ -8,7 +8,7 @@ inputsTextColor.forEach(input => {
         changeColor(this, 'color');
     });
     input.addEventListener('change', function () {
-        let id = this.parentNode.parentNode.dataset.taskId;
+        let id = this.closest('div.wrapper-card').dataset.taskId;
         let color = this.value.slice(1);
 
         fetch(`/task/${id}?operation=change-text-color&color=${color}`);
@@ -19,7 +19,7 @@ inputsBackgroundColor.forEach(input => {
         changeColor(this, 'backgroundColor');
     });
     input.addEventListener('change', function () {
-        let id = this.parentNode.parentNode.dataset.taskId;
+        let id = this.closest('div.wrapper-card').dataset.taskId;
         let color = this.value.slice(1);
 
         fetch(`/task/${id}?operation=change-background-color&background-color=${color}`);
@@ -27,7 +27,7 @@ inputsBackgroundColor.forEach(input => {
 });
 
 document.body.addEventListener('click', function(event) {
-    let elem = checkBtn(event.target, 'btn-collapsible');
+    let elem = checkBtn(event.target, 'BUTTON', 'btn-collapsible');
 
     if (!elem) {
         return;

@@ -15,6 +15,13 @@ table.table-heading td {
     width: 180px;
 }
 
+.grip-draggable {
+    cursor: move;
+}
+.dragging {
+    opacity: 0.5;
+}
+
 .gap-05 {
     gap: 0.5rem;
 }

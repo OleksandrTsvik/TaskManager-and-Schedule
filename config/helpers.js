@@ -27,4 +27,12 @@ function comparison(p1, op, p2) {
     }
 }
 
-module.exports = { dateFormat, comparison };
+function isNotCompletedTasks(arrTasks) {
+    try {
+        return !arrTasks[0].completed;
+    } catch (err) {
+        return false;
+    }
+}
+
+module.exports = { dateFormat, comparison, isNotCompletedTasks };

@@ -32,7 +32,7 @@ if (modalDeleteHeading) {
 
     document.body.addEventListener('click', function(event) {
         for (let i = 0; i < keysClasses.length; i++) {
-            let elem = checkBtn(event.target, keysClasses[i]);
+            let elem = checkBtn(event.target,'BUTTON',  keysClasses[i]);
 
             if (elem) {
                 let id = elem.parentNode.dataset.headingId;

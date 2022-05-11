@@ -9,13 +9,13 @@ router.get('/', async (req, res) => {
     try {
         let heads = await Heading.find({}).lean();
 
-        let tasks = await Task.find({ completed: false }).lean();
-        let completedTasks = await Task.find({ completed: true }).lean();
+        let tasks = await Task.find({ completed: false }).sort('position').lean();
+        let tasksCompleted = await Task.find({ completed: true }).lean();
 
         res.render('index.hbs', {
             title: 'Task Manager',
             tasks,
-            completedTasks,
+            tasksCompleted,
             heads
         });
     } catch (err) {
@@ -47,7 +47,7 @@ router.get('/not-completed', async (req, res) => {
     try {
         let heads = await Heading.find({}).lean();
 
-        let tasks = await Task.find({ completed: false }).lean();
+        let tasks = await Task.find({ completed: false }).sort('position').lean();
 
         res.render('not-completed.hbs', {
             title: 'Not Completed Tasks',
@@ -72,10 +72,15 @@ router.post('/', async (req, res) => {
 router.get('/task/:id', async (req, res) => {
     switch (req.query.operation) {
         case 'not-completed':
-            await Task.updateOne({_id: req.params.id}, {$set: {completed: false}});
+            await Task.updateOne({_id: req.params.id}, {
+                $set: {
+                    completed: false,
+                    position: -1
+                }
+            });
             break;
         case 'completed':
-            await Task.updateOne({_id: req.params.id}, {$set: {completed: true}});
+            await Task.updateOne({_id: req.params.id}, {$set: { completed: true }});
             break;
         case 'delete':
             await Task.deleteOne({_id: req.params.id});
@@ -105,6 +110,22 @@ router.post('/task/:id', async (req, res) => {
     }
 
     res.redirect('/');
+});
+
+router.post('/tasks/sort', async (req, res) => {
+    try {
+        let arr = req.body;
+
+        for (let i = 0; i < arr.length; i++) {
+            await Task.updateOne({_id: arr[i]._id}, {
+                $set: {
+                    position: arr[i].position
+                }
+            });
+        }
+    } catch (err) {
+        res.status(500).send();
+    }
 });
 
 module.exports = router;
