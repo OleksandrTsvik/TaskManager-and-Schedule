@@ -35,4 +35,8 @@ function isNotCompletedTasks(arrTasks) {
     }
 }
 
-module.exports = { dateFormat, comparison, isNotCompletedTasks };
+function getYear() {
+    return (new Date()).getFullYear();
+}
+
+module.exports = { dateFormat, comparison, isNotCompletedTasks, getYear };

@@ -1,3 +1,18 @@
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
 div.wrapper-card {
     padding: 0.5rem;
 }
