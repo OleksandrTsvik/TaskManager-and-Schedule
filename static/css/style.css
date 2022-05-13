@@ -1,3 +1,7 @@
+:root {
+    --transition-multiple-select: 0.5s;
+}
+
 html, body {
     height: 100%;
 }
@@ -36,6 +40,71 @@ table.table-heading td {
 .dragging {
     opacity: 0.5;
 }
+
+/*** ** *  Multiple Select  * ** ***/
+.multiple-select {
+    height: 50px;
+    user-select: none;
+}
+.multiple-select select[multiple="multiple"] {
+    display: none;
+}
+.multiple-select .container-multiple-select {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+.multiple-select .form-control {
+    position: absolute;
+    border-radius: 0;
+    z-index: 1000;
+}
+.multiple-select .form-control div.d-flex div {
+    padding: 2px 5px;
+}
+.multiple-select .form-control div.d-flex div:nth-child(odd) {
+    background-color: #E1F5FE;
+}
+.multiple-select .form-control div.d-flex div:nth-child(even) {
+    background-color: #F0F4C3;
+}
+.multiple-select .multiple-select-arrow {
+    transition: all var(--transition-multiple-select) ease;
+}
+.multiple-select.active-multiple-select .form-control {
+    border-color: #0277BD;
+}
+.multiple-select.active-multiple-select .multiple-select-arrow {
+    color: #0277BD;
+    transform: scale(1, -1);
+}
+.multiple-select .multiple-select-list {
+    position: absolute;
+    top: -180px;
+    width: 100%;
+    max-height: 200px;
+    background-color: white;
+    border: 1px solid #BDBDBD;
+    border-radius: 0 0 10px 10px;
+    overflow: auto;
+    z-index: 999;
+    transition: top var(--transition-multiple-select) ease-out;
+}
+.multiple-select .multiple-select-list label {
+    display: block;
+    padding: 5px 12px;
+}
+.multiple-select .multiple-select-list div.checked {
+    background-color: #EEEEEE;
+}
+.multiple-select .multiple-select-list div input[type="checkbox"] {
+    margin-top: 1px;
+    margin-right: 10px;
+}
+.multiple-select .multiple-select-list div:hover {
+    background-color: #E0E0E0;
+}
+/*** ** *  Multiple Select  * ** ***/
 
 .gap-05 {
     gap: 0.5rem;
