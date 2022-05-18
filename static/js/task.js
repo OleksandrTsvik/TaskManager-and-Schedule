@@ -6,7 +6,7 @@ const modalDeleteTask = document.querySelector('#modal-delete-task');
 if (modalEditTask && modalDeleteTask) {
     const modalFormEditTask = modalEditTask.querySelector('#form-edit-task');
     const inputEditTitle = modalFormEditTask.querySelector('#edit-title');
-    const inputEditDescription = modalFormEditTask.querySelector('#edit-description');
+    const textareaEditDescription = modalFormEditTask.querySelector('#edit-description');
 
     const linkDeleteTask = modalDeleteTask.querySelector('.modal-footer a');
     const modalBodyDeleteTask = modalDeleteTask.querySelector('div.modal-body');
@@ -47,7 +47,11 @@ if (modalEditTask && modalDeleteTask) {
         let title = description.previousElementSibling;
 
         inputEditTitle.value = title.textContent.trim();
-        inputEditDescription.value = description.textContent.trim();
+
+        let textDescription = description.querySelector('.card-text').innerHTML;
+        textareaEditDescription.value = textDescription.replace(/<br>/g, '\n');
+        textareaEditDescription.rows = textDescription.split('<br>').length;
+        textareaEditDescription.style.height = 'auto';
 
         modalFormEditTask.action = `/task/${id}?operation=edit`;
     }
@@ -63,7 +67,7 @@ if (modalEditTask && modalDeleteTask) {
         let title = description.previousElementSibling;
 
         fieldsDeleteTask[0].innerHTML = title.textContent.trim();
-        fieldsDeleteTask[1].innerHTML = description.textContent.trim();
+        fieldsDeleteTask[1].innerHTML = description.querySelector('.card-text').innerHTML;
         fieldsDeleteTask[2].innerHTML = date.textContent.trim();
 
         linkDeleteTask.href = `/task/${id}?operation=delete`;

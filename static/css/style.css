@@ -107,6 +107,10 @@ table.table-heading td {
 }
 /*** ** *  Multiple Select  * ** ***/
 
+textarea.resize-none {
+    resize: none;
+}
+
 .error-gradient {
     background: linear-gradient(135deg, rgb(207, 198, 154), rgb(110, 82, 182));
 }

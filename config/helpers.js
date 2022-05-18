@@ -39,4 +39,8 @@ function getYear() {
     return (new Date()).getFullYear();
 }
 
-module.exports = { dateFormat, comparison, isNotCompletedTasks, getYear };
+function breaklines(text) {
+    return text.replace(/(\r\n|\n|\r)/gm, '<br>');
+}
+
+module.exports = { dateFormat, comparison, isNotCompletedTasks, getYear, breaklines };
