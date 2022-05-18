@@ -107,6 +107,13 @@ table.table-heading td {
 }
 /*** ** *  Multiple Select  * ** ***/
 
+.error-gradient {
+    background: linear-gradient(135deg, rgb(207, 198, 154), rgb(110, 82, 182));
+}
+.error-fs {
+    font-size: 10rem;
+}
+
 .gap-05 {
     gap: 0.5rem;
 }

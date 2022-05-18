@@ -1,3 +1,4 @@
+const createError = require('http-errors')
 const express = require('express');
 
 const Task = require('../models/task');
@@ -5,7 +6,7 @@ const Heading = require('../models/heading');
 
 const router = new express.Router();
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res, next) => {
     try {
         let heads = await Heading.find({}).lean();
 
@@ -19,11 +20,11 @@ router.get('/', async (req, res) => {
             heads
         });
     } catch (err) {
-        res.status(400).send();
+        next(createError(500, err.message));
     }
 });
 
-router.get('/completed', async (req, res) => {
+router.get('/completed', async (req, res, next) => {
     try {
         let heads = await Heading.find({}).lean();
 
@@ -39,11 +40,11 @@ router.get('/completed', async (req, res) => {
             heads
         });
     } catch (err) {
-        res.status(400).send();
+        next(createError(500, err.message));
     }
 });
 
-router.get('/not-completed', async (req, res) => {
+router.get('/not-completed', async (req, res, next) => {
     try {
         let heads = await Heading.find({}).lean();
 
@@ -55,21 +56,21 @@ router.get('/not-completed', async (req, res) => {
             heads
         });
     } catch (err) {
-        res.status(400).send();
+        next(createError(500, err.message));
     }
 });
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res, next) => {
     try {
         let task = new Task(req.body);
         await task.save();
         res.status(201).redirect('/');
     } catch (err) {
-        res.status(500).send();
+        next(createError(500, err.message));
     }
 });
 
-router.get('/task/:id', async (req, res) => {
+router.get('/task/:id', async (req, res, next) => {
     switch (req.query.operation) {
         case 'not-completed':
             await Task.updateOne({_id: req.params.id}, {
@@ -92,27 +93,27 @@ router.get('/task/:id', async (req, res) => {
             await Task.updateOne({_id: req.params.id}, {$set: {backgroundColor: '#' + req.query['background-color']}});
             return;
         default:
-            res.status(400).send();
+            next(createError(400, 'Unknown operator GET for "task".'));
             break;
     }
 
     res.redirect('/');
 });
 
-router.post('/task/:id', async (req, res) => {
+router.post('/task/:id', async (req, res, next) => {
     switch (req.query.operation) {
         case 'edit':
             await Task.updateOne({_id: req.params.id}, {$set: req.body});
             break;
         default:
-            res.status(400).send();
+            next(createError(400, 'Unknown operator POST for "task".'));
             break;
     }
 
     res.redirect('/');
 });
 
-router.post('/tasks/sort', async (req, res) => {
+router.post('/tasks/sort', async (req, res, next) => {
     try {
         let arr = req.body;
 
@@ -124,7 +125,7 @@ router.post('/tasks/sort', async (req, res) => {
             });
         }
     } catch (err) {
-        res.status(500).send();
+        next(createError(500, err.message));
     }
 });
 

@@ -9,6 +9,7 @@ const headingRouter = require('./routers/heading');
 
 const { PORT, URL } = require('./config/config');
 const helpers = require('./config/helpers');
+const errors = require('./config/errors');
 
 const app = express();
 
@@ -27,10 +28,13 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 app.use(express.json());
+
 app.use(taskRouter);
 app.use(headingRouter);
+
+app.use(errors.errorGeneration404);
+app.use(errors.errorHandling);
 
 connectDB()
     .then(() => {
