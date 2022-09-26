@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
 const { settingsKeys } = require('../../config/config');
-const { getValueByKey } = require('../../config/settings');
+const { getValueByKey } = require('../settings');
 
 async function getSchedule() {
     const scheduleUrl = await getValueByKey(settingsKeys.linkSchedule);
@@ -17,39 +17,46 @@ async function getSchedule() {
         };
 
         let tables = document.querySelectorAll('table.schedule');
+
         let data = [];
+        let week = 1;
 
         for (let table of tables) {
             for (let tr of table.querySelectorAll('tr:not(:first-of-type)')) {
-                let trData = [];
+                let time;
 
-                for (let cell of tr.querySelectorAll('th, td')) {
-                    let variative = cell.querySelector('div.variative');
-
-                    if (cell.tagName === 'TH') {
-                        trData.push({
-                            time: deleteWhitespace(cell.textContent),
-                        });
-                    } else if (variative && variative.children.length >= 4) {
-                        trData.push({
-                            groups: deleteWhitespace(variative.children[0].textContent),
-                            subject: deleteWhitespace(variative.children[1].textContent),
-                            classRoom: deleteWhitespace(variative.children[2].textContent),
-                            teacher: deleteWhitespace(variative.children[3].textContent),
-                        });
-                    } else {
-                        trData.push({});
-                    }
+                let th = tr.querySelector('th');
+                if (th) {
+                    time = deleteWhitespace(th.textContent);
                 }
 
-                data.push(trData);
+                for (let cell of tr.querySelectorAll('td')) {
+                    let weekday = 1;
+                    let variative = cell.querySelector('div.variative');
+
+                    if (variative && variative.children.length >= 4) {
+                        data.push({
+                            week,
+                            weekday,
+                            time,
+                            subject: deleteWhitespace(variative.children[1].textContent),
+                            teacher: deleteWhitespace(variative.children[3].textContent).split(/,\s*/).filter(str => str.trim().length > 0),
+                            classRoom: deleteWhitespace(variative.children[2].textContent),
+                            groups: deleteWhitespace(variative.children[0].textContent).split(/,\s*/).filter(str => str.trim().length > 0)
+                        });
+                    }
+
+                    weekday++;
+                }
             }
+
+            week++;
         }
 
         return data;
     });
 
-    console.log(schedule);
+    // console.log(schedule);
 
     await browser.close();
 

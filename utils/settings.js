@@ -1,7 +1,7 @@
 const { encryptionFields } = require('../config/config');
 const Settings = require('../models/settings');
 
-const crypt = require('../utils/encryption');
+const crypt = require('./encryption');
 
 async function getValueByKey(key) {
     let data = await Settings.findOne({key: key});

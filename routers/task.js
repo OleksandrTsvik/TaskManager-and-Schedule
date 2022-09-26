@@ -60,6 +60,7 @@ router.post('/', async (req, res, next) => {
     try {
         let task = new models.Task(req.body);
         await task.save();
+
         res.status(201).redirect('/');
     } catch (err) {
         next(createError(500, err.message));

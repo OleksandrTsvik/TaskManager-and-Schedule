@@ -9,6 +9,8 @@ const settingsKeys = {
     linkOptionalSubjects: 'linkOptionalSubjects',
     cabinetLogin: 'cabinetLogin',
     cabinetPassword: 'cabinetPassword',
+    arrayGroups: 'arrGroups',
+    arraySubjects: 'arrSubjects',
 };
 
 const encryptionKey = 'KFgGqtJyFL50vJpsCFOh9UBm4dxhc9XY';
@@ -20,10 +22,22 @@ const encryptionFields = [
     settingsKeys.cabinetPassword
 ];
 
+const uaDayToNumber = {
+    ['Понеділок']: 1,
+    ['Вівторок']: 2,
+    ['Середа']: 3,
+    ['Четвер']: 4,
+    ['П\'ятниця']: 5,
+    ['П&#39;ятниця']: 5,
+    ['Субота']: 6,
+    ['Неділя']: 7
+};
+
 module.exports = {
     MONGO_URL, PORT, URL,
     settingsKeys,
     encryptionKey, encryptionIV,
     encryptionAlgorithm,
-    encryptionFields
+    encryptionFields,
+    uaDayToNumber
 };
