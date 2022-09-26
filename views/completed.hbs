@@ -4,5 +4,14 @@
 </h2>
 
 {{#if tasksCompleted}}
-    {{> tasks tasks=tasksCompleted }}
+    {{> tasks tasks=tasksCompleted isDraggableTasks=false isTaskCompleted=true buttons=true }}
 {{/if }}
+
+{{#if tasksCompleted }}
+    {{> modal-edit-task }}
+    {{> modal-delete-task }}
+
+    <script src="/static/js/change-color.js"></script>
+    <script src="/static/js/task.js"></script>
+    <script src="/static/js/drag-and-drop-tasks.js"></script>
+{{/if}}

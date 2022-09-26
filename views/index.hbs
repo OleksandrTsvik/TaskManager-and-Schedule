@@ -8,8 +8,8 @@
 
 {{#if tasksCompleted }}
     <hr>
-    <h3 class="text-center text-light bg-info py-3">Completed</h3>
-    {{> tasks tasks=tasksCompleted isTaskCompleted=true buttons=true }}
+    <h3 class="text-center text-light bg-info py-3">The latter are completed</h3>
+    {{> tasks tasks=tasksCompleted isDraggableTasks=false isTaskCompleted=true buttons=true }}
 {{/if }}
 
 {{#if (comparison tasks '||' tasksCompleted) }}
@@ -17,7 +17,7 @@
     {{> modal-delete-task }}
 {{/if}}
 
-<script src="/static/js/change-color.js" type="module"></script>
-<script src="/static/js/task.js" type="module"></script>
-<script src="/static/js/drag-and-drop-tasks.js" type="module"></script>
+<script src="/static/js/change-color.js"></script>
+<script src="/static/js/task.js"></script>
+<script src="/static/js/drag-and-drop-tasks.js"></script>
 <script src="/static/js/multiple-select.js"></script>

@@ -1,0 +1,41 @@
+<div class="container">
+    <h2 class="text-center mt-2">{{ title }}</h2>
+
+    <form method="post" action="/settings">
+        <div class="form-group mb-5">
+            <label for="countDaysDisplayLastCompletedTasks">The number of days to display the last completed tasks</label>
+            <input type="number" class="form-control" value="{{inputNames.countDaysDisplayLastCompletedTasks}}"
+                   name="countDaysDisplayLastCompletedTasks" id="countDaysDisplayLastCompletedTasks">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="linkSchedule">Link to schedule</label>
+            <input type="text" class="form-control" value="{{inputNames.linkSchedule}}"
+                   name="linkSchedule" id="linkSchedule">
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="linkOptionalSubjects">Links to optional subjects</label>
+            <input type="text" class="form-control" value="{{inputNames.linkOptionalSubjects}}"
+                   name="linkOptionalSubjects" id="linkOptionalSubjects">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="cabinetLogin">Login from the cabinet</label>
+            <input type="text" class="form-control" value="{{inputNames.cabinetLogin}}"
+                   name="cabinetLogin" id="cabinetLogin">
+        </div>
+
+        <div class="form-group mb-5">
+            <label for="cabinetPassword">Password from the cabinet</label>
+            <input type="password" class="form-control"
+                   name="cabinetPassword" id="cabinetPassword">
+        </div>
+
+        <div class="form-group row mb-3">
+            <div class="col text-end">
+                <button type="submit" class="btn btn-primary w-25 fs-6 fw-bold text-capitalize">Save</button>
+            </div>
+        </div>
+    </form>
+</div>

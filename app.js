@@ -4,8 +4,7 @@ const hbs = require('hbs');
 const bodyParser = require('body-parser');
 
 const connectDB = require('./db/mongoose');
-const taskRouter = require('./routers/task');
-const headingRouter = require('./routers/heading');
+const router = require('./routers/index');
 
 const { PORT, URL } = require('./config/config');
 const helpers = require('./config/helpers');
@@ -26,12 +25,14 @@ app.use('/alien', express.static('alien'));
 
 hbs.registerPartials(__dirname + '/views/partials');
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.use(taskRouter);
-app.use(headingRouter);
+app.use(router.task);
+app.use(router.heading);
+app.use(router.schedule);
+app.use(router.settings);
 
 app.use(errors.errorGeneration404);
 app.use(errors.errorHandling);

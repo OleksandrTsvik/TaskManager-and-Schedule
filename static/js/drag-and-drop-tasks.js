@@ -1,12 +1,10 @@
-import { checkBtn } from '/static/js/utils.js';
-
 const divsGripDraggable = document.querySelectorAll('div.grip-draggable');
 const container = document.querySelector('div.container-draggable');
 
 if (divsGripDraggable && container) {
     divsGripDraggable.forEach((div) => {
         div.addEventListener('mousedown', (event) => {
-            let elem = checkBtn(event.target, 'DIV', 'grip-draggable');
+            let elem = event.target.closest('div.grip-draggable');
 
             if (!elem) {
                 return;

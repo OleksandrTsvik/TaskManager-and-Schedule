@@ -1,5 +1,3 @@
-import { checkBtn } from '/static/js/utils.js';
-
 const modalEditTask = document.querySelector('#modal-edit-task');
 const modalDeleteTask = document.querySelector('#modal-delete-task');
 
@@ -23,7 +21,7 @@ if (modalEditTask && modalDeleteTask) {
 
     document.body.addEventListener('click', function(event) {
         for (let i = 0; i < keysClasses.length; i++) {
-            let elem = checkBtn(event.target,'BUTTON',  keysClasses[i]);
+            let elem = event.target.closest(`button.${keysClasses[i]}`);
 
             if (elem) {
                 let id = elem.closest('div.wrapper-card').dataset.taskId;

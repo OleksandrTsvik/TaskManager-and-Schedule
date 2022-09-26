@@ -1,5 +1,3 @@
-import { checkBtn } from '/static/js/utils.js';
-
 const modalHeading = document.querySelector('#modal-heading');
 const modalTitle = modalHeading.querySelector('h5.modal-title');
 const modalBtnSubmit = modalHeading.querySelector('div.modal-footer button[type="submit"]');
@@ -32,7 +30,7 @@ if (modalDeleteHeading) {
 
     document.body.addEventListener('click', function(event) {
         for (let i = 0; i < keysClasses.length; i++) {
-            let elem = checkBtn(event.target,'BUTTON',  keysClasses[i]);
+            let elem = event.target.closest(`button.${keysClasses[i]}`);
 
             if (elem) {
                 let id = elem.parentNode.dataset.headingId;

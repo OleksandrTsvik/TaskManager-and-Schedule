@@ -9,37 +9,40 @@
         <!-- Center elements -->
         <ul class="navbar-nav flex-row d-flex">
             <li class="nav-item me-3 me-lg-1">
-                <a class="nav-link" href="/">
+                <a class="nav-link" href="/" id="link-tasks"
+                   data-mdb-toggle="tooltip" data-mdb-placement="bottom"
+                   title="Tasks"
+                >
                     <span><i class="fas fa-tasks fa-2x text-primary"></i></span>
-                    {{#if (comparison tasks.length '>' 0) }}
-                        <span class="badge rounded-pill badge-notification bg-danger">{{ tasks.length }}</span>
-                    {{/if}}
                 </a>
             </li>
 
-            <li class="nav-item me-3 me-lg-1">
+            <li class="nav-item me-3 me-lg-1"
+                data-mdb-toggle="tooltip" data-mdb-placement="bottom"
+                title="Completed tasks"
+            >
                 <a class="nav-link" href="/completed">
                     <span><i class="fas fa-check fa-2x text-success"></i></span>
                 </a>
             </li>
 
             <li class="nav-item me-3 me-lg-1">
-                <a class="nav-link" href="/not-completed">
-                    <span><i class="fas fa-times fa-2x text-warning"></i></span>
-                </a>
-            </li>
-
-            <li class="nav-item me-3 me-lg-1">
-                <a class="nav-link" href="/tasks/heading">
+                <a class="nav-link" href="/tasks/heading"
+                   data-mdb-toggle="tooltip" data-mdb-placement="bottom"
+                   title="Task titles"
+                >
                     <span><i class="fas fa-heading fa-2x text-dark"></i></span>
                 </a>
             </li>
 
-<!--            <li class="nav-item me-3 me-lg-1">-->
-<!--                <a class="nav-link" href="#">-->
-<!--                    <span><i class="fas fa-history fa-2x text-secondary"></i></span>-->
-<!--                </a>-->
-<!--            </li>-->
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="/schedule"
+                   data-mdb-toggle="tooltip" data-mdb-placement="bottom"
+                   title="Schedule"
+                >
+                    <i class="fas fa-calendar-alt fa-2x" style="color: #7986CB;"></i>
+                </a>
+            </li>
         </ul>
         <!-- Center elements -->
 
@@ -50,13 +53,42 @@
                 data-mdb-target="#modal-add-task"
                 id="add-task"
             >
-                <a class="nav-link" type="button">
+                <a class="nav-link" type="button"
+                   data-mdb-toggle="tooltip" data-mdb-placement="bottom"
+                   title="Add task"
+                >
                     <span><i class="fas fa-plus-circle fa-2x text-dark"></i></span>
+                </a>
+            </li>
+            <li class="nav-item me-3 me-lg-1">
+                <a class="nav-link" href="/settings"
+                   data-mdb-toggle="tooltip" data-mdb-placement="bottom"
+                   title="Settings"
+                >
+                    <i class="fas fa-cog fa-2x" style="color: #1A237E;"></i>
                 </a>
             </li>
         </ul>
         <!-- Right elements -->
     </div>
 </nav>
+
+<script>
+    let elemLinkTasks = document.querySelector('#link-tasks');
+
+    fetch('/tasks/count')
+        .then((res) => {
+            return res.json();
+        })
+        .then((data) => {
+            if (data.count > 0) {
+                let elemSpan = document.createElement('span');
+                elemSpan.classList.add('badge', 'rounded-pill', 'badge-notification', 'bg-danger');
+                elemSpan.innerHTML = data.count;
+
+                elemLinkTasks.append(elemSpan);
+            }
+        });
+</script>
 
 {{> modal-add-task }}

@@ -33,6 +33,12 @@ table.table-heading td {
 .table-heading tr:first-of-type th:last-of-type {
     width: 180px;
 }
+.table-heading tr:first-of-type th:first-of-type {
+    width: 30px;
+}
+.table-heading td:first-of-type {
+    background-color: #C8E6C9;
+}
 
 .grip-draggable {
     cursor: move;
