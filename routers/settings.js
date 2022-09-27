@@ -79,6 +79,8 @@ router.put('/settings/group', async (req, res, next) => {
         }
 
         let arrGroups = await getValueByKey(settingsKeys.arrayGroups);
+        let arrSubjects = await getValueByKey(settingsKeys.arraySubjects);
+
         arrGroups.forEach((item) => {
             if (item.group === group) {
                 item.selected = selected;
@@ -86,6 +88,23 @@ router.put('/settings/group', async (req, res, next) => {
         });
 
         await models.Settings.updateOne({key: settingsKeys.arrayGroups}, {value: arrGroups});
+        await models.Schedule.updateMany({
+                subject: { "$in": arrSubjects.filter(item => item.selected).map(item => item.subject) },
+                groups: { "$in": arrGroups.filter(item => item.selected).map(item => item.group) },
+                selective: false
+            },
+            {show: true}
+        );
+        await models.Schedule.updateMany({
+                subject: { "$in": arrSubjects.filter(item => item.selected).map(item => item.subject) },
+                $and: [
+                    { groups: {"$ne": []} },
+                    { groups: {"$nin": arrGroups.filter(item => item.selected).map(item => item.group)} }
+                ],
+                selective: false
+            },
+            {show: false}
+        );
 
         res.status(200).json({
             message: 'OK',
@@ -107,6 +126,8 @@ router.put('/settings/subject', async (req, res, next) => {
         }
 
         let arrSubjects = await getValueByKey(settingsKeys.arraySubjects);
+        let arrGroups = await getValueByKey(settingsKeys.arrayGroups);
+
         arrSubjects.forEach((item) => {
             if (item.subject === subject) {
                 item.selected = selected;
@@ -114,6 +135,37 @@ router.put('/settings/subject', async (req, res, next) => {
         });
 
         await models.Settings.updateOne({key: settingsKeys.arraySubjects}, {value: arrSubjects});
+        await models.Schedule.updateMany({
+                subject,
+                $or: [
+                    { groups: {"$eq": []} },
+                    { groups: {"$in": arrGroups.filter(item => item.selected).map(item => item.group)} }
+                ],
+                selective: false
+            },
+            {show: selected}
+        );
+
+        res.status(200).json({
+            message: 'OK',
+        });
+    } catch(err) {
+        next(createError(500, err.message));
+    }
+});
+
+router.put('/settings/subject/:id', async (req, res, next) => {
+    try {
+        let { id } = req.params;
+        let show = req.query.show === 'true';
+
+        if (!id) {
+            return res.status(404).json({
+                message: 'Bad request',
+            });
+        }
+
+        await models.Schedule.updateOne({_id: id}, {show: show});
 
         res.status(200).json({
             message: 'OK',

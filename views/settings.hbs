@@ -92,20 +92,20 @@
                             <th>Time</th>
                             <th>Subject</th>
                             <th>Teacher</th>
-                            <th>Class Form</th>
+                            <th>Class Room</th>
                             <th>Weekday</th>
                             <th>Group</th>
                         </tr>
                     </thead>
                     <tbody class="selective-subjects">
                         {{#each selectiveSubjects }}
-                            <tr data-subject-id="{{ this._id }}">
+                            <tr data-subject-id="{{ this._id }}" {{#if this.show }}class="table-dark"{{/if}}>
                                 <td>{{ increment @index }}</td>
                                 <td>{{ this.time }}</td>
                                 <td>{{{ this.subject }}}</td>
                                 <td>{{{ this.teacher }}}</td>
-                                <td>{{ this.classForm }}</td>
-                                <td>{{ this.weekday }}</td>
+                                <td>{{ this.classRoom }}</td>
+                                <td>{{ numberToEnglishDay this.weekday }}</td>
                                 <td>{{ this.groups }}</td>
                             </tr>
                         {{/each}}

@@ -36,7 +36,7 @@ async function getOptionalSubjects() {
             time: obj.B,
             subject: obj.C,
             teacher: obj.D.split(/,\s*/).filter(str => str.trim().length > 0),
-            classForm: obj.E,
+            classRoom: obj.E,
             groups: [obj.G.trim()],
             selective: true
         };

@@ -24,6 +24,7 @@ async function getSchedule() {
         for (let table of tables) {
             for (let tr of table.querySelectorAll('tr:not(:first-of-type)')) {
                 let time;
+                let weekday = 1;
 
                 let th = tr.querySelector('th');
                 if (th) {
@@ -31,7 +32,6 @@ async function getSchedule() {
                 }
 
                 for (let cell of tr.querySelectorAll('td')) {
-                    let weekday = 1;
                     let variative = cell.querySelector('div.variative');
 
                     if (variative && variative.children.length >= 4) {

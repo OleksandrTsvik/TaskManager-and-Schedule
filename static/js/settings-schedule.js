@@ -26,7 +26,9 @@
             }
 
             fetch(
-                `/settings/group?group=${btnGroup.textContent.trim()}&selected=${btnGroup.classList.contains(classSelectedGroup)}`,
+                `/settings/group` +
+                `?group=${btnGroup.textContent.trim()}` +
+                `&selected=${btnGroup.classList.contains(classSelectedGroup)}`,
                 {
                     method: 'PUT'
                 }
@@ -48,7 +50,9 @@
             }
 
             fetch(
-                `/settings/subject?subject=${btnSubject.textContent.trim()}&selected=${btnSubject.classList.contains(classSelectedSubject)}`,
+                `/settings/subject` +
+                `?subject=${btnSubject.textContent.trim()}` +
+                `&selected=${btnSubject.classList.contains(classSelectedSubject)}`,
                 {
                     method: 'PUT'
                 }
@@ -63,7 +67,14 @@
         if (trSelectiveSubject) {
             trSelectiveSubject.classList.toggle(classSelectedSelectiveSubject);
 
-            console.log(trSelectiveSubject.dataset.subjectId)
+            fetch(
+                `/settings/subject` +
+                `/${trSelectiveSubject.dataset.subjectId}` +
+                `?show=${trSelectiveSubject.classList.contains(classSelectedSelectiveSubject)}`,
+                {
+                    method: 'PUT'
+                }
+            );
         }
     });
 })();

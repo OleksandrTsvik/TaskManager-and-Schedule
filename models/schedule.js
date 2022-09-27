@@ -20,11 +20,15 @@ const Schedule = mongosse.model('Schedule', {
     teacher: {
         type: Array
     },
-    classForm: {
+    classRoom: {
         type: String
     },
     groups: {
         type: Array
+    },
+    show: {
+        type: Boolean,
+        default: false
     },
     selective: {
         type: Boolean,
