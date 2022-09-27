@@ -5,8 +5,8 @@ const { SETTINGS_KEYS, MS_PER_DAY } = require('../config/config');
 const models = require('../models/index');
 const getSchedule = require('../utils/parsing/schedule');
 const getOptionalSubjects = require('../utils/parsing/google-excel');
-const { getValueByKey } = require("../utils/settings");
-
+const getCabinetSchedule = require('../utils/parsing/cabinet-schedule');
+const { getSettingsValueByKey } = require('../utils/settings');
 
 const router = new express.Router();
 
@@ -31,7 +31,7 @@ router.get('/schedule', async (req, res, next) => {
         let countDay = displaySchedule.reduce((schedule, current) => schedule.weekday > current.weekday ? schedule : current).weekday;
 
         let nowDate = new Date();
-        let firstWeekScheduleDate = new Date(await getValueByKey(SETTINGS_KEYS.dateFirstWeekSchedule));
+        let firstWeekScheduleDate = new Date(await getSettingsValueByKey(SETTINGS_KEYS.dateFirstWeekSchedule));
         let numberWeek = Math.trunc(Math.ceil(Math.abs(nowDate - firstWeekScheduleDate) / MS_PER_DAY) / 7);
 
         let currentWeekday = nowDate.getDay();
@@ -44,7 +44,11 @@ router.get('/schedule', async (req, res, next) => {
             currentWeek = countWeek;
         }
 
+        let cabinetData = await getCabinetSchedule();
+
         if (currentWeekday > countDay) {
+            cabinetData = false;
+
             currentWeekday = 1;
             currentWeek++;
         }
@@ -68,6 +72,19 @@ router.get('/schedule', async (req, res, next) => {
 
                     if (subject.week === currentWeek && subject.weekday === currentWeekday) {
                         subject.today = true;
+
+                        if (cabinetData) {
+                            let cabinetSubject = cabinetData.find(item => (
+                                item.time === subject.time &&
+                                item.subject === subject.subject
+                            ));
+
+                            if (cabinetSubject) {
+                                subject.cabinetContent = cabinetSubject.content;
+                            } else {
+                                subject.cabinetContent = 'There are no data!!!';
+                            }
+                        }
                     }
 
                     timeRow.push(subject);
@@ -96,8 +113,8 @@ router.get('/schedule/update', async (req, res, next) => {
         let schedule = await getSchedule();
         let optionalSubjects = await getOptionalSubjects();
 
-        let lastArrSubjects = await getValueByKey(SETTINGS_KEYS.arraySubjects);
-        let lastArrGroups = await getValueByKey(SETTINGS_KEYS.arrayGroups);
+        let lastArrSubjects = await getSettingsValueByKey(SETTINGS_KEYS.arraySubjects);
+        let lastArrGroups = await getSettingsValueByKey(SETTINGS_KEYS.arrayGroups);
         let lastOptionalSubjects = await models.Schedule.find({selective: true});
 
         for (let subject of schedule) {

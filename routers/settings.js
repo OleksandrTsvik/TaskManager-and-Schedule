@@ -4,7 +4,7 @@ const express = require('express');
 const { SETTINGS_KEYS, ENCRYPTION_FIELDS } = require('../config/config');
 const models = require('../models/index');
 const crypt = require('../utils/encryption');
-const { getValueByKey } = require("../utils/settings");
+const { getSettingsValueByKey } = require("../utils/settings");
 
 const router = new express.Router();
 
@@ -13,7 +13,7 @@ router.get('/settings', async (req, res, next) => {
         const inputNames = {};
 
         for (let param of Object.values(SETTINGS_KEYS)) {
-            let settingsValue = await getValueByKey(param);
+            let settingsValue = await getSettingsValueByKey(param);
 
             if (settingsValue) {
                 inputNames[param] = settingsValue;
@@ -42,22 +42,24 @@ router.post('/settings', async (req, res, next) => {
             if (req.body.hasOwnProperty(param)) {
                 let bodyValue = req.body[param];
 
-                if (ENCRYPTION_FIELDS.includes(param)) {
-                    bodyValue = crypt.encryption(bodyValue);
-                }
-
-                await models.Settings.findOneAndUpdate(
-                    {
-                        key: param
-                    },
-                    {
-                        key: param,
-                        value: bodyValue
-                    },
-                    {
-                        upsert: true
+                if (bodyValue) {
+                    if (ENCRYPTION_FIELDS.includes(param)) {
+                        bodyValue = crypt.encryption(bodyValue);
                     }
-                );
+
+                    await models.Settings.findOneAndUpdate(
+                        {
+                            key: param
+                        },
+                        {
+                            key: param,
+                            value: bodyValue
+                        },
+                        {
+                            upsert: true
+                        }
+                    );
+                }
             }
         }
 
@@ -78,8 +80,8 @@ router.put('/settings/group', async (req, res, next) => {
             });
         }
 
-        let arrGroups = await getValueByKey(SETTINGS_KEYS.arrayGroups);
-        let arrSubjects = await getValueByKey(SETTINGS_KEYS.arraySubjects);
+        let arrGroups = await getSettingsValueByKey(SETTINGS_KEYS.arrayGroups);
+        let arrSubjects = await getSettingsValueByKey(SETTINGS_KEYS.arraySubjects);
 
         arrGroups.forEach((item) => {
             if (item.group === group) {
@@ -125,8 +127,8 @@ router.put('/settings/subject', async (req, res, next) => {
             });
         }
 
-        let arrSubjects = await getValueByKey(SETTINGS_KEYS.arraySubjects);
-        let arrGroups = await getValueByKey(SETTINGS_KEYS.arrayGroups);
+        let arrSubjects = await getSettingsValueByKey(SETTINGS_KEYS.arraySubjects);
+        let arrGroups = await getSettingsValueByKey(SETTINGS_KEYS.arrayGroups);
 
         arrSubjects.forEach((item) => {
             if (item.subject === subject) {

@@ -40,7 +40,16 @@
                 <tr>
                     <td class="white-space-nowrap py-0 px-1 bg-dark text-white">{{ [0].time }}</td>
                     {{#each this }}
-                    <td {{#if this.today }}class="current-day"{{/if}}>
+                    <td {{#if this.today }}
+                        class="current-day {{#if this.subject }}cursor-pointer{{/if}}"
+                        {{#if this.subject }}
+                            data-mdb-toggle="popover"
+                            data-mdb-custom-class="font-monospace border border-2 border-dark"
+                            data-mdb-html="true"
+                            title="{{ this.subject }}"
+                            data-mdb-content="{{ this.cabinetContent }}"
+                        {{/if}}
+                    {{/if}}>
                         {{#if this.subject }}
                             <div>
                                 <div class="small">{{ displayArray this.groups ', ' }}</div>

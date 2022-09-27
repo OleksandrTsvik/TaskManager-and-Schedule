@@ -1,9 +1,9 @@
 const { ENCRYPTION_FIELDS } = require('../config/config');
-const Settings = require('../models/settings');
+const { Settings } = require('../models/index');
 
 const crypt = require('./encryption');
 
-async function getValueByKey(key) {
+async function getSettingsValueByKey(key) {
     let data = await Settings.findOne({key: key});
 
     if (!data) {
@@ -18,5 +18,5 @@ async function getValueByKey(key) {
 }
 
 module.exports = {
-    getValueByKey
+    getSettingsValueByKey,
 };

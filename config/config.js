@@ -9,6 +9,8 @@ const SETTINGS_KEYS = {
     countDaysDisplayLastCompletedTasks: 'countDaysDisplayLastCompletedTasks',
     linkSchedule: 'linkSchedule',
     linkOptionalSubjects: 'linkOptionalSubjects',
+    linkLoginCabinet: 'linkLoginCabinet',
+    linkScheduleCabinet: 'linkScheduleCabinet',
     cabinetLogin: 'cabinetLogin',
     cabinetPassword: 'cabinetPassword',
     arrayGroups: 'arrGroups',

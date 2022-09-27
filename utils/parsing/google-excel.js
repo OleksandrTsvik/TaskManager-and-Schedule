@@ -2,10 +2,10 @@ const axios = require('axios');
 const xlsx = require('xlsx');
 
 const { SETTINGS_KEYS, UA_DAY_TO_NUMBER } = require('../../config/config');
-const { getValueByKey } = require('../settings');
+const { getSettingsValueByKey } = require('../settings');
 
 async function getOptionalSubjects() {
-    const fileURL = await getValueByKey(SETTINGS_KEYS.linkOptionalSubjects);
+    const fileURL = await getSettingsValueByKey(SETTINGS_KEYS.linkOptionalSubjects);
 
     const response = await axios({
         method: 'GET',

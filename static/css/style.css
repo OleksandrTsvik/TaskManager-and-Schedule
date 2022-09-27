@@ -138,8 +138,11 @@ textarea.resize-none {
     gap: 0.5rem;
 }
 .text-no-transform {
-    text-transform: none;
+    text-transform: none !important;
 }
 .white-space-nowrap {
     white-space: nowrap !important;
+}
+.cursor-pointer {
+    cursor: pointer !important;
 }
