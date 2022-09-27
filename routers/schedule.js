@@ -44,6 +44,11 @@ router.get('/schedule', async (req, res, next) => {
             currentWeek = countWeek;
         }
 
+        if (currentWeekday > countDay) {
+            currentWeekday = 1;
+            currentWeek++;
+        }
+
         for (let i = 1; i <= countWeek; i++) {
             let week = [];
 
