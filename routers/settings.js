@@ -1,7 +1,7 @@
 const createError = require("http-errors");
 const express = require('express');
 
-const { settingsKeys, encryptionFields } = require('../config/config');
+const { SETTINGS_KEYS, ENCRYPTION_FIELDS } = require('../config/config');
 const models = require('../models/index');
 const crypt = require('../utils/encryption');
 const { getValueByKey } = require("../utils/settings");
@@ -12,7 +12,7 @@ router.get('/settings', async (req, res, next) => {
     try {
         const inputNames = {};
 
-        for (let param of Object.values(settingsKeys)) {
+        for (let param of Object.values(SETTINGS_KEYS)) {
             let settingsValue = await getValueByKey(param);
 
             if (settingsValue) {
@@ -36,13 +36,13 @@ router.get('/settings', async (req, res, next) => {
 
 router.post('/settings', async (req, res, next) => {
     try {
-        const arrExpectedParams = Object.keys(settingsKeys);
+        const arrExpectedParams = Object.keys(SETTINGS_KEYS);
 
          for (let param of arrExpectedParams) {
             if (req.body.hasOwnProperty(param)) {
                 let bodyValue = req.body[param];
 
-                if (encryptionFields.includes(param)) {
+                if (ENCRYPTION_FIELDS.includes(param)) {
                     bodyValue = crypt.encryption(bodyValue);
                 }
 
@@ -78,8 +78,8 @@ router.put('/settings/group', async (req, res, next) => {
             });
         }
 
-        let arrGroups = await getValueByKey(settingsKeys.arrayGroups);
-        let arrSubjects = await getValueByKey(settingsKeys.arraySubjects);
+        let arrGroups = await getValueByKey(SETTINGS_KEYS.arrayGroups);
+        let arrSubjects = await getValueByKey(SETTINGS_KEYS.arraySubjects);
 
         arrGroups.forEach((item) => {
             if (item.group === group) {
@@ -87,7 +87,7 @@ router.put('/settings/group', async (req, res, next) => {
             }
         });
 
-        await models.Settings.updateOne({key: settingsKeys.arrayGroups}, {value: arrGroups});
+        await models.Settings.updateOne({key: SETTINGS_KEYS.arrayGroups}, {value: arrGroups});
         await models.Schedule.updateMany({
                 subject: { "$in": arrSubjects.filter(item => item.selected).map(item => item.subject) },
                 groups: { "$in": arrGroups.filter(item => item.selected).map(item => item.group) },
@@ -125,8 +125,8 @@ router.put('/settings/subject', async (req, res, next) => {
             });
         }
 
-        let arrSubjects = await getValueByKey(settingsKeys.arraySubjects);
-        let arrGroups = await getValueByKey(settingsKeys.arrayGroups);
+        let arrSubjects = await getValueByKey(SETTINGS_KEYS.arraySubjects);
+        let arrGroups = await getValueByKey(SETTINGS_KEYS.arrayGroups);
 
         arrSubjects.forEach((item) => {
             if (item.subject === subject) {
@@ -134,7 +134,7 @@ router.put('/settings/subject', async (req, res, next) => {
             }
         });
 
-        await models.Settings.updateOne({key: settingsKeys.arraySubjects}, {value: arrSubjects});
+        await models.Settings.updateOne({key: SETTINGS_KEYS.arraySubjects}, {value: arrSubjects});
         await models.Schedule.updateMany({
                 subject,
                 $or: [

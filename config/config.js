@@ -3,7 +3,9 @@ const MONGO_URL = "mongodb://localhost:27017/task-manager";
 const PORT = 3001;
 const URL = `http://localhost:${PORT}`;
 
-const settingsKeys = {
+const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+const SETTINGS_KEYS = {
     countDaysDisplayLastCompletedTasks: 'countDaysDisplayLastCompletedTasks',
     linkSchedule: 'linkSchedule',
     linkOptionalSubjects: 'linkOptionalSubjects',
@@ -11,18 +13,19 @@ const settingsKeys = {
     cabinetPassword: 'cabinetPassword',
     arrayGroups: 'arrGroups',
     arraySubjects: 'arrSubjects',
+    dateFirstWeekSchedule: 'dateFirstWeekSchedule',
 };
 
-const encryptionKey = 'KFgGqtJyFL50vJpsCFOh9UBm4dxhc9XY';
-const encryptionIV = 'Gw7fVhXY520ofTHw';
-const encryptionAlgorithm = 'aes-256-cbc';
+const ENCRYPTION_KEY = 'KFgGqtJyFL50vJpsCFOh9UBm4dxhc9XY';
+const ENCRYPTION_IV = 'Gw7fVhXY520ofTHw';
+const ENCRYPTION_ALGORITHM = 'aes-256-cbc';
 
-const encryptionFields = [
-    settingsKeys.cabinetLogin,
-    settingsKeys.cabinetPassword
+const ENCRYPTION_FIELDS = [
+    SETTINGS_KEYS.cabinetLogin,
+    SETTINGS_KEYS.cabinetPassword
 ];
 
-const uaDayToNumber = {
+const UA_DAY_TO_NUMBER = {
     ['Понеділок']: 1,
     ['Вівторок']: 2,
     ['Середа']: 3,
@@ -35,9 +38,8 @@ const uaDayToNumber = {
 
 module.exports = {
     MONGO_URL, PORT, URL,
-    settingsKeys,
-    encryptionKey, encryptionIV,
-    encryptionAlgorithm,
-    encryptionFields,
-    uaDayToNumber
+    SETTINGS_KEYS,
+    ENCRYPTION_KEY, ENCRYPTION_IV, ENCRYPTION_ALGORITHM, ENCRYPTION_FIELDS,
+    UA_DAY_TO_NUMBER,
+    MS_PER_DAY
 };

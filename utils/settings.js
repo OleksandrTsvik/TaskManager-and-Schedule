@@ -1,4 +1,4 @@
-const { encryptionFields } = require('../config/config');
+const { ENCRYPTION_FIELDS } = require('../config/config');
 const Settings = require('../models/settings');
 
 const crypt = require('./encryption');
@@ -10,7 +10,7 @@ async function getValueByKey(key) {
         return null;
     }
 
-    if (encryptionFields.includes(key)) {
+    if (ENCRYPTION_FIELDS.includes(key)) {
         return crypt.decryption(data.value);
     }
 

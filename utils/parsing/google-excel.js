@@ -1,11 +1,11 @@
 const axios = require('axios');
 const xlsx = require('xlsx');
 
-const { settingsKeys, uaDayToNumber } = require('../../config/config');
+const { SETTINGS_KEYS, UA_DAY_TO_NUMBER } = require('../../config/config');
 const { getValueByKey } = require('../settings');
 
 async function getOptionalSubjects() {
-    const fileURL = await getValueByKey(settingsKeys.linkOptionalSubjects);
+    const fileURL = await getValueByKey(SETTINGS_KEYS.linkOptionalSubjects);
 
     const response = await axios({
         method: 'GET',
@@ -32,7 +32,7 @@ async function getOptionalSubjects() {
     sheet01JSON = sheet01JSON.map(obj => {
         return {
             week: 1,
-            weekday: uaDayToNumber[obj.F],
+            weekday: UA_DAY_TO_NUMBER[obj.F],
             time: obj.B,
             subject: obj.C,
             teacher: obj.D.split(/,\s*/).filter(str => str.trim().length > 0),

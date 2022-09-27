@@ -1,7 +1,7 @@
 const createError = require("http-errors");
 const express = require('express');
 
-const { settingsKeys } = require('../config/config');
+const { SETTINGS_KEYS } = require('../config/config');
 const models = require('../models/index');
 const getSchedule = require('../utils/parsing/schedule');
 const getOptionalSubjects = require('../utils/parsing/google-excel');
@@ -24,6 +24,13 @@ router.get('/schedule', async (req, res, next) => {
             '16:30-17:50',
             '18:00-19:20'
         ];
+
+        let nowDate = new Date();
+        let firstWeekScheduleDate = new Date(await getValueByKey(SETTINGS_KEYS.dateFirstWeekSchedule));
+
+        console.log(nowDate)
+        console.log(firstWeekScheduleDate)
+        console.log(new Date(nowDate - firstWeekScheduleDate))
 
         let sortDisplaySchedule = [];
 
@@ -68,8 +75,8 @@ router.get('/schedule/update', async (req, res, next) => {
         let schedule = await getSchedule();
         let optionalSubjects = await getOptionalSubjects();
 
-        let lastArrSubjects = await getValueByKey(settingsKeys.arraySubjects);
-        let lastArrGroups = await getValueByKey(settingsKeys.arrayGroups);
+        let lastArrSubjects = await getValueByKey(SETTINGS_KEYS.arraySubjects);
+        let lastArrGroups = await getValueByKey(SETTINGS_KEYS.arrayGroups);
         let lastOptionalSubjects = await models.Schedule.find({selective: true});
 
         for (let subject of schedule) {
@@ -127,10 +134,10 @@ router.get('/schedule/update', async (req, res, next) => {
 
         await models.Settings.findOneAndUpdate(
             {
-                key: settingsKeys.arraySubjects
+                key: SETTINGS_KEYS.arraySubjects
             },
             {
-                key: settingsKeys.arraySubjects,
+                key: SETTINGS_KEYS.arraySubjects,
                 value: arrSubjects
             },
             {
@@ -140,10 +147,10 @@ router.get('/schedule/update', async (req, res, next) => {
 
         await models.Settings.findOneAndUpdate(
             {
-                key: settingsKeys.arrayGroups
+                key: SETTINGS_KEYS.arrayGroups
             },
             {
-                key: settingsKeys.arrayGroups,
+                key: SETTINGS_KEYS.arrayGroups,
                 value: arrGroups
             },
             {

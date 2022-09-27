@@ -1,9 +1,9 @@
 const crypto = require('crypto');
 
-const { encryptionKey, encryptionIV, encryptionAlgorithm } = require('../config/config');
+const { ENCRYPTION_KEY, ENCRYPTION_IV, ENCRYPTION_ALGORITHM } = require('../config/config');
 
 function encryption(dataEncrypted) {
-    const cipher = crypto.createCipheriv(encryptionAlgorithm, encryptionKey, encryptionIV);
+    const cipher = crypto.createCipheriv(ENCRYPTION_ALGORITHM, ENCRYPTION_KEY, ENCRYPTION_IV);
 
     let encrypted = cipher.update(dataEncrypted, 'utf8', 'hex');
     encrypted += cipher.final('hex');
@@ -12,7 +12,7 @@ function encryption(dataEncrypted) {
 }
 
 function decryption(dataDecrypt) {
-    const decipher = crypto.createDecipheriv(encryptionAlgorithm, encryptionKey, encryptionIV);
+    const decipher = crypto.createDecipheriv(ENCRYPTION_ALGORITHM, ENCRYPTION_KEY, ENCRYPTION_IV);
 
     let decrypted = decipher.update(dataDecrypt, 'hex', 'utf8');
     decrypted += decipher.final('utf8');

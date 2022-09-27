@@ -1,10 +1,10 @@
 const puppeteer = require('puppeteer');
 
-const { settingsKeys } = require('../../config/config');
+const { SETTINGS_KEYS } = require('../../config/config');
 const { getValueByKey } = require('../settings');
 
 async function getSchedule() {
-    const scheduleUrl = await getValueByKey(settingsKeys.linkSchedule);
+    const scheduleUrl = await getValueByKey(SETTINGS_KEYS.linkSchedule);
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
