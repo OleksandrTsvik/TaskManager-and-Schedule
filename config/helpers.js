@@ -6,43 +6,31 @@ function dateFormat(date, options) {
 
 function comparison(p1, op, p2) {
     switch (op) {
-        case '==':
-            return p1 == p2;
-        case '!=':
-            return p1 != p2;
-        case '===':
-            return p1 === p2;
-        case '!==':
-            return p1 !== p2;
-        case '<':
-            return p1 < p2;
-        case '<=':
-            return p1 <= p2;
-        case '>':
-            return p1 > p2;
-        case '>=':
-            return p1 >= p2;
-        case '&&':
-            return p1 && p2;
-        case '||':
-            return p1 || p2;
-        default:
-            return false;
+        case '==': return p1 == p2;
+        case '!=': return p1 != p2;
+        case '===': return p1 === p2;
+        case '!==': return p1 !== p2;
+        case '<': return p1 < p2;
+        case '<=': return p1 <= p2;
+        case '>': return p1 > p2;
+        case '>=': return p1 >= p2;
+        case '&&': return p1 && p2;
+        case '||': return p1 || p2;
+        default: return false;
     }
 }
 
 function operation(p1, op, p2) {
+    p1 = Number(p1);
+    p2 = Number(p2);
+
     switch (op) {
-        case '/':
-            return p2 != 0 ? p1 / p2 : NaN;
-        case '*':
-            return p1 * p2;
-        case '+':
-            return p1 + p2;
-        case '-':
-            return p1 - p2;
-        default:
-            return NaN;
+        case '/': return p2 !== 0 ? p1 / p2 : NaN;
+        case '%': return p2 !== 0 ? p1 % p2 : NaN;
+        case '*': return p1 * p2;
+        case '+': return p1 + p2;
+        case '-': return p1 - p2;
+        default: return NaN;
     }
 }
 
