@@ -113,6 +113,16 @@ table.table-heading td {
 }
 /*** ** *  Multiple Select  * ** ***/
 
+th.current-day {
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    color: white !important;
+    background-color: #303F9F !important;
+}
+td.current-day {
+    background-color: #C5CAE9 !important;
+}
+
 textarea.resize-none {
     resize: none;
 }

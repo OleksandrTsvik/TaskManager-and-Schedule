@@ -30,7 +30,8 @@
                 <tr class="table-primary">
                     <th class="px-1 bg-dark text-white"></th>
                     {{#forLoop 1 ../countDay 1 }}
-                        <th style="width: {{ operation (operation 1 '/' ../../countDay) '*' 100 }}%">{{ numberToEnglishDay this }}</th>
+                        <th {{#if (comparison (comparison ../../currentWeek '===' (increment @index)) '&&' (comparison ../../currentWeekday '===' this)) }}class="current-day"{{/if}}
+                            style="width: {{ operation (operation 1 '/' ../../countDay) '*' 100 }}%">{{ numberToEnglishDay this }}</th>
                     {{/forLoop}}
                 </tr>
             </thead>
@@ -39,18 +40,16 @@
                 <tr>
                     <td class="white-space-nowrap py-0 px-1 bg-dark text-white">{{ [0].time }}</td>
                     {{#each this }}
+                    <td {{#if this.today }}class="current-day"{{/if}}>
                         {{#if this.subject }}
-                            <td>
-                                <div>
-                                    <div class="small">{{ displayArray this.groups ', ' }}</div>
-                                    <div class="fs-6 fw-bold">{{ this.subject }}</div>
-                                    <div class="small text-primary">{{ this.classRoom }}</div>
-                                    <div class="fst-italic">{{{ displayArray this.teacher ',<br/>' }}}</div>
-                                </div>
-                            </td>
-                        {{else}}
-                            <td></td>
+                            <div>
+                                <div class="small">{{ displayArray this.groups ', ' }}</div>
+                                <div class="fs-6 fw-bold">{{ this.subject }}</div>
+                                <div class="small text-primary">{{ this.classRoom }}</div>
+                                <div class="fst-italic">{{{ displayArray this.teacher ',<br/>' }}}</div>
+                            </div>
                         {{/if}}
+                    </td>
                     {{/each}}
                 </tr>
             {{/each}}

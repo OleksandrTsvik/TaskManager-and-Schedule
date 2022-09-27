@@ -1,11 +1,11 @@
 const createError = require("http-errors");
 const express = require('express');
 
-const { SETTINGS_KEYS } = require('../config/config');
+const { SETTINGS_KEYS, MS_PER_DAY } = require('../config/config');
 const models = require('../models/index');
 const getSchedule = require('../utils/parsing/schedule');
 const getOptionalSubjects = require('../utils/parsing/google-excel');
-const {getValueByKey} = require("../utils/settings");
+const { getValueByKey } = require("../utils/settings");
 
 
 const router = new express.Router();
@@ -25,17 +25,24 @@ router.get('/schedule', async (req, res, next) => {
             '18:00-19:20'
         ];
 
-        let nowDate = new Date();
-        let firstWeekScheduleDate = new Date(await getValueByKey(SETTINGS_KEYS.dateFirstWeekSchedule));
-
-        console.log(nowDate)
-        console.log(firstWeekScheduleDate)
-        console.log(new Date(nowDate - firstWeekScheduleDate))
-
         let sortDisplaySchedule = [];
 
         let countWeek = displaySchedule.reduce((schedule, current) => schedule.week > current.week ? schedule : current).week;
         let countDay = displaySchedule.reduce((schedule, current) => schedule.weekday > current.weekday ? schedule : current).weekday;
+
+        let nowDate = new Date();
+        let firstWeekScheduleDate = new Date(await getValueByKey(SETTINGS_KEYS.dateFirstWeekSchedule));
+        let numberWeek = Math.trunc(Math.ceil(Math.abs(nowDate - firstWeekScheduleDate) / MS_PER_DAY) / 7);
+
+        let currentWeekday = nowDate.getDay();
+        if (currentWeekday === 0) {
+            currentWeekday = 7;
+        }
+
+        let currentWeek = numberWeek % countWeek;
+        if (currentWeek === 0) {
+            currentWeek = countWeek;
+        }
 
         for (let i = 1; i <= countWeek; i++) {
             let week = [];
@@ -50,7 +57,15 @@ router.get('/schedule', async (req, res, next) => {
                         item.weekday === j
                     );
 
-                    timeRow.push(subject ? subject : {time});
+                    if (!subject) {
+                        subject = {week: i, weekday: j, time};
+                    }
+
+                    if (subject.week === currentWeek && subject.weekday === currentWeekday) {
+                        subject.today = true;
+                    }
+
+                    timeRow.push(subject);
                 }
 
                 week.push(timeRow);
@@ -63,6 +78,7 @@ router.get('/schedule', async (req, res, next) => {
             title: 'Schedule',
             schedule,
             countDay,
+            currentWeek, currentWeekday,
             displaySchedule: sortDisplaySchedule
         });
     } catch(err) {
