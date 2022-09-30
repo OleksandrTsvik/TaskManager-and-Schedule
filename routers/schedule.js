@@ -44,13 +44,15 @@ router.get('/schedule', async (req, res, next) => {
             currentWeek = countWeek;
         }
 
-        let cabinetData = await getCabinetSchedule();
+        let cabinetData;
 
         if (currentWeekday > countDay) {
             cabinetData = false;
 
             currentWeekday = 1;
             currentWeek++;
+        } else {
+            cabinetData = await getCabinetSchedule();
         }
 
         for (let i = 1; i <= countWeek; i++) {

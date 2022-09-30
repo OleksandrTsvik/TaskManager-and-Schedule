@@ -117,7 +117,7 @@
                     </thead>
                     <tbody class="selective-subjects">
                         {{#each selectiveSubjects }}
-                            <tr data-subject-id="{{ this._id }}" {{#if this.show }}class="table-dark"{{/if}}>
+                            <tr data-subject-id="{{ this._id }}" class="cursor-pointer {{#if this.show }}table-dark{{/if}}">
                                 <td>{{ increment @index }}</td>
                                 <td>{{ this.time }}</td>
                                 <td>{{{ this.subject }}}</td>

@@ -33,6 +33,10 @@ const taskSchema = new mongosse.Schema({
         type: Date,
         default: new Date()
     },
+    dateEnd: {
+        type: Date,
+        default: null
+    },
     position: {
         type: Number,
         default: Number.MAX_VALUE

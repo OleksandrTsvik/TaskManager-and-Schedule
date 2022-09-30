@@ -2,6 +2,8 @@ const createError = require('http-errors')
 const express = require('express');
 
 const models = require('../models/index');
+const {getSettingsValueByKey} = require("../utils/settings");
+const {SETTINGS_KEYS} = require("../config/config");
 
 const router = new express.Router();
 
@@ -14,16 +16,17 @@ router.get('/', async (req, res, next) => {
 
         let tasks = await models.Task.find({ completed: false }).sort('position').lean();
 
+        let countDaysDisplayLastCompletedTasks = await getSettingsValueByKey(SETTINGS_KEYS.countDaysDisplayLastCompletedTasks);
         let dateLastTasks = new Date();
-        dateLastTasks.setDate(dateLastTasks.getDate() - 14);
 
-        let tasksCompleted = await models.Task
-            .find({
-                completed: true,
-                dateCreation: { $gte: dateLastTasks }
-            })
-            .lean();
-        tasksCompleted.sort((t1, t2) => t1.dateCreation > t2.dateCreation ? -1 : 1);
+        dateLastTasks.setDate(dateLastTasks.getDate() - countDaysDisplayLastCompletedTasks);
+
+        let tasksCompleted = await models.Task.find({
+            completed: true,
+            dateEnd: { $gte: dateLastTasks }
+        }).lean();
+
+        tasksCompleted.sort((t1, t2) => (t1.dateEnd || -1) > (t2.dateEnd || -1) ? -1 : 1);
 
         res.render('index.hbs', {
             title: 'Task Manager',
@@ -44,7 +47,7 @@ router.get('/completed', async (req, res, next) => {
             .lean();
 
         let tasksCompleted =  await models.Task.find({completed: true}).lean();
-        tasksCompleted.sort((t1, t2) => t1.dateCreation > t2.dateCreation ? -1 : 1);
+        tasksCompleted.sort((t1, t2) => (t1.dateEnd || -1) > (t2.dateEnd || -1) ? -1 : 1);
 
         res.render('completed.hbs', {
             title: 'Completed Tasks',
@@ -73,12 +76,13 @@ router.get('/task/:id', async (req, res, next) => {
             await models.Task.updateOne({_id: req.params.id}, {
                 $set: {
                     completed: false,
+                    dateEnd: null,
                     position: -1
                 }
             });
             break;
         case 'completed':
-            await models.Task.updateOne({_id: req.params.id}, {$set: { completed: true }});
+            await models.Task.updateOne({_id: req.params.id}, {$set: { completed: true, dateEnd: new Date() }});
             break;
         case 'delete':
             await models.Task.deleteOne({_id: req.params.id});
