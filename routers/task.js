@@ -32,7 +32,8 @@ router.get('/', async (req, res, next) => {
             title: 'Task Manager',
             tasks,
             tasksCompleted,
-            heads
+            heads,
+            countDaysDisplayLastCompletedTasks
         });
     } catch (err) {
         next(createError(500, err.message));

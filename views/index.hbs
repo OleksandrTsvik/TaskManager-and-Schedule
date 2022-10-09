@@ -8,7 +8,10 @@
 
 {{#if tasksCompleted }}
     <hr>
-    <h3 class="text-center text-light bg-info py-3">The latter are completed</h3>
+    <h3 class="text-center text-light bg-info py-3">
+        The latter are completed
+        <span class="fs-5">({{ countDaysDisplayLastCompletedTasks }} days)</span>
+    </h3>
     {{> tasks tasks=tasksCompleted isDraggableTasks=false isTaskCompleted=true buttons=true }}
 {{/if }}
 
