@@ -19,6 +19,16 @@
     <!-- Tabs navs -->
 </div>
 
+<!-- Errors -->
+{{#if (existFieldsInObj errors) }}
+    <div class="mx-4 alert alert-danger" role="alert" data-mdb-color="danger">
+        {{#each (getValuesFromObj errors) }}
+            <p class="mb-0">{{ this }}</p>
+        {{/each}}
+    </div>
+{{/if}}
+<!-- Errors -->
+
 <!-- Tabs content -->
 <div class="tab-content">
     <div class="tab-pane fade show active px-3" id="tabs-schedule"

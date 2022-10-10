@@ -12,6 +12,7 @@ const router = new express.Router();
 
 router.get('/schedule', async (req, res, next) => {
     try {
+        let errors = {};
         let schedule = await models.Schedule.find({}).lean();
         let displaySchedule = schedule.filter(item => item.show);
 
@@ -52,7 +53,13 @@ router.get('/schedule', async (req, res, next) => {
             currentWeekday = 1;
             currentWeek = currentWeek === countWeek ? 1 : currentWeek + 1;
         } else {
-            cabinetData = await getCabinetSchedule();
+            try {
+                cabinetData = await getCabinetSchedule();
+            } catch (err) {
+                cabinetData = false;
+                errors.cabinetSchedule = 'An error occurred while parsing the schedule from the cabinet.';
+                console.log(err.message)
+            }
         }
 
         for (let i = 1; i <= countWeek; i++) {
@@ -103,7 +110,8 @@ router.get('/schedule', async (req, res, next) => {
             schedule,
             countDay,
             currentWeek, currentWeekday,
-            displaySchedule: sortDisplaySchedule
+            displaySchedule: sortDisplaySchedule,
+            errors
         });
     } catch(err) {
         next(createError(500, err.message));

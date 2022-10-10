@@ -73,6 +73,14 @@ function forLoop(from, to, increment, block) {
     return temp;
 }
 
+function getValuesFromObj(obj) {
+    return Object.values(obj);
+}
+
+function existFieldsInObj(obj) {
+    return Object.values(obj).length > 0;
+}
+
 module.exports = {
     dateFormat,
     comparison,
@@ -83,4 +91,6 @@ module.exports = {
     numberToEnglishDay,
     forLoop,
     operation,
+    getValuesFromObj,
+    existFieldsInObj,
 };

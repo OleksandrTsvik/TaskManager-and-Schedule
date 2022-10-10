@@ -13,7 +13,13 @@ async function getCabinetSchedule() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    await page.goto(loginCabinetUrl, { waitUntil: "domcontentloaded" });
+    page.setDefaultNavigationTimeout(1000);
+
+    let response = await page.goto(loginCabinetUrl, { waitUntil: 'domcontentloaded' });
+    let status = response.status();
+    if (200 < status || status >= 400) {
+        throw new Error(`The cabinet is not working, the status is ${status}, according to the link - ${loginCabinetUrl}.`);
+    }
 
     await page.$eval('#loginform-username', (elem, login) => {
         elem.value = login;
@@ -27,7 +33,11 @@ async function getCabinetSchedule() {
 
     await page.waitForNavigation();
 
-    await page.goto(scheduleCabinetUrl, { waitUntil: "domcontentloaded" });
+    response = await page.goto(scheduleCabinetUrl, { waitUntil: 'domcontentloaded' });
+    status = response.status();
+    if (200 < status || status >= 400) {
+        throw new Error(`The cabinet schedule is not working, the status is ${status}, according to the link - ${scheduleCabinetUrl}.`);
+    }
 
     const schedule = await page.$$eval('.pair', (elems) => {
         return elems.map(elem => ({
