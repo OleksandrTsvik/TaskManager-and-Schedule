@@ -51,14 +51,16 @@
                     <td class="white-space-nowrap py-0 px-1 bg-dark text-white">{{ [0].time }}</td>
                     {{#each this }}
                     <td {{#if this.today }}
-                        class="current-day {{#if this.cabinetContent }}cursor-pointer{{/if}}"
-                        {{#if this.cabinetContent }}
-                            data-mdb-toggle="popover"
-                            data-mdb-custom-class="font-monospace border border-2 border-dark"
-                            data-mdb-html="true"
-                            title="{{ this.subject }}"
-                            data-mdb-content="{{ this.cabinetContent }}"
-                        {{/if}}
+                            {{#if (comparison this.subject '&&' this.cabinetContent) }}
+                                class="current-day cursor-pointer"
+                                data-mdb-toggle="popover"
+                                data-mdb-custom-class="font-monospace border border-2 border-dark"
+                                data-mdb-html="true"
+                                title="{{ this.subject }}"
+                                data-mdb-content="{{ this.cabinetContent }}"
+                            {{else}}
+                                class="current-day"
+                            {{/if}}
                     {{/if}}>
                         {{#if this.subject }}
                             <div>
