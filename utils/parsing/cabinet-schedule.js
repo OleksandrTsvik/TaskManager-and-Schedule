@@ -13,7 +13,7 @@ async function getCabinetSchedule() {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
 
-    page.setDefaultNavigationTimeout(3000);
+    page.setDefaultNavigationTimeout(7000);
 
     let response = await page.goto(loginCabinetUrl, { waitUntil: 'domcontentloaded' });
     let status = response.status();

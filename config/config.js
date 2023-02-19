@@ -1,4 +1,5 @@
-const MONGO_URL = "mongodb://localhost:27017/task-manager";
+// const MONGO_URL = "mongodb://localhost:27017/task-manager";
+const MONGO_URL = "mongodb://127.0.0.1:27017/task-manager";
 
 const PORT = 3001;
 const URL = `http://localhost:${PORT}`;
