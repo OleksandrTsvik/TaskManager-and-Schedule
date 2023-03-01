@@ -1,0 +1,1763 @@
+{
+  "@types/node@17.0.31": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\node",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\node\\LICENSE"
+  },
+  "@types/webidl-conversions@6.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\webidl-conversions",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\webidl-conversions\\LICENSE"
+  },
+  "@types/whatwg-url@8.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\whatwg-url",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\whatwg-url\\LICENSE"
+  },
+  "@types/yauzl@2.10.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\yauzl",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\@types\\yauzl\\LICENSE"
+  },
+  "abbrev@1.1.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/abbrev-js",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\abbrev",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\abbrev\\LICENSE"
+  },
+  "accepts@1.3.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/accepts",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\accepts",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\accepts\\LICENSE"
+  },
+  "adler-32@1.3.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/js-adler32",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\adler-32",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\adler-32\\LICENSE"
+  },
+  "agent-base@6.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/TooTallNate/node-agent-base",
+    "publisher": "Nathan Rajlich",
+    "email": "nathan@tootallnate.net",
+    "url": "http://n8.io/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\agent-base",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\agent-base\\README.md"
+  },
+  "ansi-styles@3.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/ansi-styles",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ansi-styles",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ansi-styles\\license"
+  },
+  "anymatch@3.1.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/micromatch/anymatch",
+    "publisher": "Elan Shanker",
+    "url": "https://github.com/es128",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\anymatch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\anymatch\\LICENSE"
+  },
+  "array-find-index@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/array-find-index",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\array-find-index",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\array-find-index\\license"
+  },
+  "array-flatten@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/blakeembrey/array-flatten",
+    "publisher": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\array-flatten",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\array-flatten\\LICENSE"
+  },
+  "asap@2.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/kriskowal/asap",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\asap",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\asap\\LICENSE.md"
+  },
+  "asynckit@0.4.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/alexindigo/asynckit",
+    "publisher": "Alex Indigo",
+    "email": "iam@alexindigo.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\asynckit",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\asynckit\\LICENSE"
+  },
+  "axios@0.27.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/axios/axios",
+    "publisher": "Matt Zabriskie",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\axios",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\axios\\LICENSE"
+  },
+  "balanced-match@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/balanced-match",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\balanced-match",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\balanced-match\\LICENSE.md"
+  },
+  "base64-js@1.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/beatgammit/base64-js",
+    "publisher": "T. Jameson Little",
+    "email": "t.jameson.little@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\base64-js",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\base64-js\\LICENSE"
+  },
+  "binary-extensions@2.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/binary-extensions",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\binary-extensions",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\binary-extensions\\license"
+  },
+  "bl@4.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/rvagg/bl",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\bl",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\bl\\LICENSE.md"
+  },
+  "body-parser@1.20.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/expressjs/body-parser",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\body-parser",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\body-parser\\LICENSE"
+  },
+  "brace-expansion@1.1.11": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/brace-expansion",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\node_modules\\brace-expansion",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\node_modules\\brace-expansion\\LICENSE"
+  },
+  "brace-expansion@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/juliangruber/brace-expansion",
+    "publisher": "Julian Gruber",
+    "email": "mail@juliangruber.com",
+    "url": "http://juliangruber.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\brace-expansion",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\brace-expansion\\LICENSE"
+  },
+  "braces@3.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/braces",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\braces",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\braces\\LICENSE"
+  },
+  "bson@4.6.3": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/mongodb/js-bson",
+    "publisher": "The MongoDB NodeJS Team",
+    "email": "dbx-node@mongodb.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\bson",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\bson\\LICENSE.md"
+  },
+  "buffer-crc32@0.2.13": {
+    "licenses": "MIT",
+    "repository": "https://github.com/brianloveswords/buffer-crc32",
+    "publisher": "Brian J. Brennan",
+    "email": "brianloveswords@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\buffer-crc32",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\buffer-crc32\\LICENSE"
+  },
+  "buffer@5.7.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/feross/buffer",
+    "publisher": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\buffer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\buffer\\LICENSE"
+  },
+  "bytes@3.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/visionmedia/bytes.js",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "url": "http://tjholowaychuk.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\bytes",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\bytes\\LICENSE"
+  },
+  "call-bind@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/call-bind",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\call-bind",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\call-bind\\LICENSE"
+  },
+  "cfb@1.2.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/js-cfb",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cfb",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cfb\\LICENSE"
+  },
+  "chalk@2.4.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/chalk",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\chalk",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\chalk\\license"
+  },
+  "chokidar@3.5.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/paulmillr/chokidar",
+    "publisher": "Paul Miller",
+    "url": "https://paulmillr.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\chokidar",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\chokidar\\LICENSE"
+  },
+  "chownr@1.1.4": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/chownr",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\chownr",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\chownr\\LICENSE"
+  },
+  "codepage@1.15.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/js-codepage",
+    "publisher": "SheetJS",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\codepage",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\codepage\\LICENSE"
+  },
+  "color-convert@1.9.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Qix-/color-convert",
+    "publisher": "Heather Arthur",
+    "email": "fayearthur@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\color-convert",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\color-convert\\LICENSE"
+  },
+  "color-name@1.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/dfcreative/color-name",
+    "publisher": "DY",
+    "email": "dfcreative@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\color-name",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\color-name\\LICENSE"
+  },
+  "combined-stream@1.0.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/felixge/node-combined-stream",
+    "publisher": "Felix Geisendörfer",
+    "email": "felix@debuggable.com",
+    "url": "http://debuggable.com/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\combined-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\combined-stream\\License"
+  },
+  "concat-map@0.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/node-concat-map",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\concat-map",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\concat-map\\LICENSE"
+  },
+  "content-disposition@0.5.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/content-disposition",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\content-disposition",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\content-disposition\\LICENSE"
+  },
+  "content-type@1.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/content-type",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\content-type",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\content-type\\LICENSE"
+  },
+  "cookie-signature@1.0.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/visionmedia/node-cookie-signature",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@learnboost.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cookie-signature",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cookie-signature\\Readme.md"
+  },
+  "cookie@0.5.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/cookie",
+    "publisher": "Roman Shtylman",
+    "email": "shtylman@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cookie",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cookie\\LICENSE"
+  },
+  "crc-32@1.2.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/js-crc32",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\crc-32",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\crc-32\\LICENSE"
+  },
+  "cross-fetch@3.1.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/lquixada/cross-fetch",
+    "publisher": "Leonardo Quixada",
+    "email": "lquixada@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\LICENSE"
+  },
+  "debug@2.6.9": {
+    "licenses": "MIT",
+    "repository": "https://github.com/visionmedia/debug",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\debug",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\debug\\LICENSE"
+  },
+  "debug@3.2.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/visionmedia/debug",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\license-checker\\node_modules\\debug",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\license-checker\\node_modules\\debug\\LICENSE"
+  },
+  "debug@4.3.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/debug-js/debug",
+    "publisher": "Josh Junon",
+    "email": "josh.junon@protonmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mquery\\node_modules\\debug",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mquery\\node_modules\\debug\\LICENSE"
+  },
+  "debuglog@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sam-github/node-debuglog",
+    "publisher": "Sam Roberts",
+    "email": "sam@strongloop.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\debuglog",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\debuglog\\LICENSE"
+  },
+  "delayed-stream@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/felixge/node-delayed-stream",
+    "publisher": "Felix Geisendörfer",
+    "email": "felix@debuggable.com",
+    "url": "http://debuggable.com/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\delayed-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\delayed-stream\\License"
+  },
+  "denque@2.0.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/invertase/denque",
+    "publisher": "Invertase",
+    "email": "oss@invertase.io",
+    "url": "http://github.com/invertase/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\denque",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\denque\\LICENSE"
+  },
+  "depd@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/dougwilson/nodejs-depd",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\depd",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\depd\\LICENSE"
+  },
+  "destroy@1.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/stream-utils/destroy",
+    "publisher": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\destroy",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\destroy\\LICENSE"
+  },
+  "devtools-protocol@0.0.1036444": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/ChromeDevTools/devtools-protocol",
+    "publisher": "The Chromium Authors",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\devtools-protocol",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\devtools-protocol\\LICENSE"
+  },
+  "dezalgo@1.0.4": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/dezalgo",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\dezalgo",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\dezalgo\\LICENSE"
+  },
+  "ee-first@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonathanong/ee-first",
+    "publisher": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ee-first",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ee-first\\LICENSE"
+  },
+  "encodeurl@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pillarjs/encodeurl",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\encodeurl",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\encodeurl\\LICENSE"
+  },
+  "end-of-stream@1.4.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/end-of-stream",
+    "publisher": "Mathias Buus",
+    "email": "mathiasbuus@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\end-of-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\end-of-stream\\LICENSE"
+  },
+  "escape-html@1.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/component/escape-html",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\escape-html",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\escape-html\\LICENSE"
+  },
+  "escape-string-regexp@1.0.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/escape-string-regexp",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\escape-string-regexp",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\escape-string-regexp\\license"
+  },
+  "etag@1.8.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/etag",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\etag",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\etag\\LICENSE"
+  },
+  "express-handlebars@6.0.5": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/express-handlebars/express-handlebars",
+    "publisher": "Eric Ferraiuolo",
+    "email": "eferraiuolo@gmail.com",
+    "url": "http://ericf.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\express-handlebars",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\express-handlebars\\LICENSE"
+  },
+  "express@4.18.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/expressjs/express",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\express",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\express\\LICENSE"
+  },
+  "extract-zip@2.0.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/maxogden/extract-zip",
+    "publisher": "max ogden",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\extract-zip",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\extract-zip\\LICENSE"
+  },
+  "fd-slicer@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/andrewrk/node-fd-slicer",
+    "publisher": "Andrew Kelley",
+    "email": "superjoe30@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fd-slicer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fd-slicer\\LICENSE"
+  },
+  "fill-range@7.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/fill-range",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fill-range",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fill-range\\LICENSE"
+  },
+  "finalhandler@1.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pillarjs/finalhandler",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\finalhandler",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\finalhandler\\LICENSE"
+  },
+  "follow-redirects@1.15.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/follow-redirects/follow-redirects",
+    "publisher": "Ruben Verborgh",
+    "email": "ruben@verborgh.org",
+    "url": "https://ruben.verborgh.org/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\follow-redirects",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\follow-redirects\\LICENSE"
+  },
+  "foreachasync@3.0.0": {
+    "licenses": "Apache*",
+    "repository": "https://github.com/FuturesJS/forEachAsync",
+    "publisher": "AJ ONeal",
+    "email": "coolaj86@gmail.com",
+    "url": "http://coolaj86.com/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\foreachasync",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\foreachasync\\LICENSE"
+  },
+  "form-data@4.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/form-data/form-data",
+    "publisher": "Felix Geisendörfer",
+    "email": "felix@debuggable.com",
+    "url": "http://debuggable.com/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\form-data",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\form-data\\License"
+  },
+  "forwarded@0.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/forwarded",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\forwarded",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\forwarded\\LICENSE"
+  },
+  "frac@1.1.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/frac",
+    "publisher": "SheetJS",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\frac",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\frac\\LICENSE"
+  },
+  "fresh@0.5.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/fresh",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "url": "http://tjholowaychuk.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fresh",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fresh\\LICENSE"
+  },
+  "fs-constants@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/fs-constants",
+    "publisher": "Mathias Buus",
+    "url": "@mafintosh",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fs-constants",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fs-constants\\LICENSE"
+  },
+  "fs.realpath@1.0.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/fs.realpath",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fs.realpath",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\fs.realpath\\LICENSE"
+  },
+  "function-bind@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Raynos/function-bind",
+    "publisher": "Raynos",
+    "email": "raynos2@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\function-bind",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\function-bind\\LICENSE"
+  },
+  "get-intrinsic@1.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/get-intrinsic",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\get-intrinsic",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\get-intrinsic\\LICENSE"
+  },
+  "get-stream@5.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/get-stream",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "https://sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\get-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\get-stream\\license"
+  },
+  "glob-parent@5.1.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/gulpjs/glob-parent",
+    "publisher": "Gulp Team",
+    "email": "team@gulpjs.com",
+    "url": "https://gulpjs.com/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\glob-parent",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\glob-parent\\LICENSE"
+  },
+  "glob@7.2.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-glob",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\node_modules\\glob",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\node_modules\\glob\\LICENSE"
+  },
+  "glob@8.0.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-glob",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\glob",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\glob\\LICENSE"
+  },
+  "graceful-fs@4.2.10": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-graceful-fs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\graceful-fs",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\graceful-fs\\LICENSE"
+  },
+  "handlebars@4.7.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/wycats/handlebars.js",
+    "publisher": "Yehuda Katz",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\handlebars",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\handlebars\\LICENSE"
+  },
+  "has-flag@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/has-flag",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\has-flag",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\has-flag\\license"
+  },
+  "has-symbols@1.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/inspect-js/has-symbols",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "url": "http://ljharb.codes",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\has-symbols",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\has-symbols\\LICENSE"
+  },
+  "has@1.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/tarruda/has",
+    "publisher": "Thiago de Arruda",
+    "email": "tpadilha84@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\has",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\has\\LICENSE-MIT"
+  },
+  "hbs@4.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pillarjs/hbs",
+    "publisher": "Don Park",
+    "email": "donpark@docuverse.com",
+    "url": "http://blog.docuverse.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\hbs",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\hbs\\LICENSE"
+  },
+  "hosted-git-info@2.8.9": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/hosted-git-info",
+    "publisher": "Rebecca Turner",
+    "email": "me@re-becca.org",
+    "url": "http://re-becca.org",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\hosted-git-info",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\hosted-git-info\\LICENSE"
+  },
+  "http-errors@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/http-errors",
+    "publisher": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\http-errors",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\http-errors\\LICENSE"
+  },
+  "https-proxy-agent@5.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/TooTallNate/node-https-proxy-agent",
+    "publisher": "Nathan Rajlich",
+    "email": "nathan@tootallnate.net",
+    "url": "http://n8.io/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\https-proxy-agent",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\https-proxy-agent\\README.md"
+  },
+  "iconv-lite@0.4.24": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ashtuchkin/iconv-lite",
+    "publisher": "Alexander Shtuchkin",
+    "email": "ashtuchkin@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\iconv-lite",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\iconv-lite\\LICENSE"
+  },
+  "ieee754@1.2.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/feross/ieee754",
+    "publisher": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ieee754",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ieee754\\LICENSE"
+  },
+  "ignore-by-default@1.0.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/novemberborn/ignore-by-default",
+    "publisher": "Mark Wubben",
+    "url": "https://novemberborn.net/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ignore-by-default",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ignore-by-default\\LICENSE"
+  },
+  "inflight@1.0.6": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/inflight",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\inflight",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\inflight\\LICENSE"
+  },
+  "inherits@2.0.4": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/inherits",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\inherits",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\inherits\\LICENSE"
+  },
+  "ip@1.1.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/indutny/node-ip",
+    "publisher": "Fedor Indutny",
+    "email": "fedor@indutny.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ip",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ip\\README.md"
+  },
+  "ipaddr.js@1.9.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/whitequark/ipaddr.js",
+    "publisher": "whitequark",
+    "email": "whitequark@whitequark.org",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ipaddr.js",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ipaddr.js\\LICENSE"
+  },
+  "is-binary-path@2.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/is-binary-path",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-binary-path",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-binary-path\\license"
+  },
+  "is-core-module@2.11.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/inspect-js/is-core-module",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-core-module",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-core-module\\LICENSE"
+  },
+  "is-extglob@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-extglob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-extglob",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-extglob\\LICENSE"
+  },
+  "is-glob@4.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/is-glob",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-glob",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-glob\\LICENSE"
+  },
+  "is-number@7.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/is-number",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-number",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\is-number\\LICENSE"
+  },
+  "json-parse-even-better-errors@2.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/npm/json-parse-even-better-errors",
+    "publisher": "Kat Marchán",
+    "email": "kzm@zkat.tech",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\json-parse-even-better-errors",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\json-parse-even-better-errors\\LICENSE.md"
+  },
+  "kareem@2.3.5": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/vkarpov15/kareem",
+    "publisher": "Valeri Karpov",
+    "email": "val@karpov.io",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\kareem",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\kareem\\LICENSE"
+  },
+  "license-checker@25.0.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/davglass/license-checker",
+    "publisher": "Dav Glass",
+    "email": "davglass@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\license-checker",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\license-checker\\LICENSE"
+  },
+  "media-typer@0.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/media-typer",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\media-typer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\media-typer\\LICENSE"
+  },
+  "memory-pager@1.5.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/memory-pager",
+    "publisher": "Mathias Buus",
+    "url": "@mafintosh",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\memory-pager",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\memory-pager\\LICENSE"
+  },
+  "merge-descriptors@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/component/merge-descriptors",
+    "publisher": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\merge-descriptors",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\merge-descriptors\\LICENSE"
+  },
+  "methods@1.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/methods",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\methods",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\methods\\LICENSE"
+  },
+  "mime-db@1.52.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/mime-db",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mime-db",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mime-db\\LICENSE"
+  },
+  "mime-types@2.1.35": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/mime-types",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mime-types",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mime-types\\LICENSE"
+  },
+  "mime@1.6.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/broofa/node-mime",
+    "publisher": "Robert Kieffer",
+    "email": "robert@broofa.com",
+    "url": "http://github.com/broofa",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mime",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mime\\LICENSE"
+  },
+  "minimatch@3.1.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/minimatch",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\node_modules\\minimatch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\node_modules\\minimatch\\LICENSE"
+  },
+  "minimatch@5.0.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/minimatch",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\minimatch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\minimatch\\LICENSE"
+  },
+  "minimist@1.2.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/minimist",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\minimist",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\minimist\\LICENSE"
+  },
+  "mkdirp-classic@0.5.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/mkdirp-classic",
+    "publisher": "Mathias Buus",
+    "url": "@mafintosh",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mkdirp-classic",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mkdirp-classic\\LICENSE"
+  },
+  "mkdirp@0.5.6": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/node-mkdirp",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mkdirp",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mkdirp\\LICENSE"
+  },
+  "moment@2.29.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/moment/moment",
+    "publisher": "Iskren Ivov Chernev",
+    "email": "iskren.chernev@gmail.com",
+    "url": "https://github.com/ichernev",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\moment",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\moment\\LICENSE"
+  },
+  "mongodb-connection-string-url@2.5.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/mongodb-js/mongodb-connection-string-url",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mongodb-connection-string-url",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mongodb-connection-string-url\\LICENSE"
+  },
+  "mongodb@4.5.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/mongodb/node-mongodb-native",
+    "publisher": "The MongoDB NodeJS Team",
+    "email": "dbx-node@mongodb.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mongodb",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mongodb\\LICENSE.md"
+  },
+  "mongoose@6.3.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Automattic/mongoose",
+    "publisher": "Guillermo Rauch",
+    "email": "guillermo@learnboost.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mongoose",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mongoose\\LICENSE.md"
+  },
+  "mpath@0.9.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/aheckmann/mpath",
+    "publisher": "Aaron Heckmann",
+    "email": "aaron.heckmann+github@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mpath",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mpath\\LICENSE"
+  },
+  "mquery@4.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/aheckmann/mquery",
+    "publisher": "Aaron Heckmann",
+    "email": "aaron.heckmann+github@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mquery",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mquery\\LICENSE"
+  },
+  "ms@2.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/zeit/ms",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ms",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ms\\license.md"
+  },
+  "ms@2.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/zeit/ms",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mquery\\node_modules\\ms",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\mquery\\node_modules\\ms\\license.md"
+  },
+  "ms@2.1.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/vercel/ms",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\send\\node_modules\\ms",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\send\\node_modules\\ms\\license.md"
+  },
+  "negotiator@0.6.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/negotiator",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\negotiator",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\negotiator\\LICENSE"
+  },
+  "neo-async@2.6.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/suguru03/neo-async",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\neo-async",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\neo-async\\LICENSE"
+  },
+  "node-fetch@2.6.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/bitinn/node-fetch",
+    "publisher": "David Frank",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\node-fetch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\node-fetch\\LICENSE.md"
+  },
+  "nodemon@2.0.20": {
+    "licenses": "MIT",
+    "repository": "https://github.com/remy/nodemon",
+    "publisher": "Remy Sharp",
+    "url": "https://github.com/remy",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\nodemon",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\nodemon\\LICENSE"
+  },
+  "nopt@1.0.10": {
+    "licenses": "MIT",
+    "repository": "https://github.com/isaacs/nopt",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\nopt",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\nopt\\LICENSE"
+  },
+  "nopt@4.0.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/nopt",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\license-checker\\node_modules\\nopt",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\license-checker\\node_modules\\nopt\\LICENSE"
+  },
+  "normalize-package-data@2.5.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/npm/normalize-package-data",
+    "publisher": "Meryn Stol",
+    "email": "merynstol@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\normalize-package-data",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\normalize-package-data\\LICENSE"
+  },
+  "normalize-path@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jonschlinkert/normalize-path",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\normalize-path",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\normalize-path\\LICENSE"
+  },
+  "npm-normalize-package-bin@1.0.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/npm-normalize-package-bin",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "https://izs.me",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\npm-normalize-package-bin",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\npm-normalize-package-bin\\LICENSE"
+  },
+  "object-inspect@1.12.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/inspect-js/object-inspect",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\object-inspect",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\object-inspect\\LICENSE"
+  },
+  "on-finished@2.4.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/on-finished",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\on-finished",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\on-finished\\LICENSE"
+  },
+  "once@1.4.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/once",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\once",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\once\\LICENSE"
+  },
+  "os-homedir@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/os-homedir",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\os-homedir",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\os-homedir\\license"
+  },
+  "os-tmpdir@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/os-tmpdir",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\os-tmpdir",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\os-tmpdir\\license"
+  },
+  "osenv@0.1.5": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/osenv",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\osenv",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\osenv\\LICENSE"
+  },
+  "parseurl@1.3.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pillarjs/parseurl",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\parseurl",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\parseurl\\LICENSE"
+  },
+  "path-is-absolute@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/sindresorhus/path-is-absolute",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\path-is-absolute",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\path-is-absolute\\license"
+  },
+  "path-parse@1.0.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jbgutierrez/path-parse",
+    "publisher": "Javier Blanco",
+    "email": "http://jbgutierrez.info",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\path-parse",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\path-parse\\LICENSE"
+  },
+  "path-to-regexp@0.1.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/component/path-to-regexp",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\path-to-regexp",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\path-to-regexp\\LICENSE"
+  },
+  "pend@1.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/andrewrk/node-pend",
+    "publisher": "Andrew Kelley",
+    "email": "superjoe30@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\pend",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\pend\\LICENSE"
+  },
+  "picomatch@2.3.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/picomatch",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\picomatch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\picomatch\\LICENSE"
+  },
+  "progress@2.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/visionmedia/node-progress",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\progress",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\progress\\LICENSE"
+  },
+  "proxy-addr@2.0.7": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/proxy-addr",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\proxy-addr",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\proxy-addr\\LICENSE"
+  },
+  "proxy-from-env@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Rob--W/proxy-from-env",
+    "publisher": "Rob Wu",
+    "email": "rob@robwu.nl",
+    "url": "https://robwu.nl/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\proxy-from-env",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\proxy-from-env\\LICENSE"
+  },
+  "pstree.remy@1.1.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/remy/pstree",
+    "publisher": "Remy Sharp",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\pstree.remy",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\pstree.remy\\LICENSE"
+  },
+  "pump@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/pump",
+    "publisher": "Mathias Buus Madsen",
+    "email": "mathiasbuus@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\pump",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\pump\\LICENSE"
+  },
+  "punycode@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/bestiejs/punycode.js",
+    "publisher": "Mathias Bynens",
+    "url": "https://mathiasbynens.be/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\punycode",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\punycode\\LICENSE-MIT.txt"
+  },
+  "puppeteer@18.0.5": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/puppeteer/puppeteer",
+    "publisher": "The Chromium Authors",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\puppeteer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\puppeteer\\LICENSE"
+  },
+  "qs@6.10.3": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/ljharb/qs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\qs",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\qs\\LICENSE.md"
+  },
+  "range-parser@1.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/range-parser",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "url": "http://tjholowaychuk.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\range-parser",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\range-parser\\LICENSE"
+  },
+  "raw-body@2.5.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/stream-utils/raw-body",
+    "publisher": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\raw-body",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\raw-body\\LICENSE"
+  },
+  "read-installed@4.0.3": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/read-installed",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-installed",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-installed\\LICENSE"
+  },
+  "read-package-json@2.1.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/read-package-json",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\read-package-json\\LICENSE"
+  },
+  "readable-stream@3.6.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodejs/readable-stream",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\readable-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\readable-stream\\LICENSE"
+  },
+  "readdir-scoped-modules@1.1.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/readdir-scoped-modules",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\readdir-scoped-modules",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\readdir-scoped-modules\\LICENSE"
+  },
+  "readdirp@3.6.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/paulmillr/readdirp",
+    "publisher": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de",
+    "url": "thlorenz.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\readdirp",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\readdirp\\LICENSE"
+  },
+  "resolve@1.22.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/browserify/resolve",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\resolve",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\resolve\\LICENSE"
+  },
+  "rimraf@3.0.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/rimraf",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\rimraf",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\rimraf\\LICENSE"
+  },
+  "safe-buffer@5.2.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/feross/safe-buffer",
+    "publisher": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "https://feross.org",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\safe-buffer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\safe-buffer\\LICENSE"
+  },
+  "safer-buffer@2.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ChALkeR/safer-buffer",
+    "publisher": "Nikita Skovoroda",
+    "email": "chalkerx@gmail.com",
+    "url": "https://github.com/ChALkeR",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\safer-buffer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\safer-buffer\\LICENSE"
+  },
+  "saslprep@1.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/reklatsmasters/saslprep",
+    "publisher": "Dmitry Tsvettsikh",
+    "email": "me@reklatsmasters.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\saslprep",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\saslprep\\LICENSE"
+  },
+  "semver@5.7.1": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/node-semver",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\semver",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\semver\\LICENSE"
+  },
+  "semver@7.0.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/node-semver",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\simple-update-notifier\\node_modules\\semver",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\simple-update-notifier\\node_modules\\semver\\LICENSE"
+  },
+  "send@0.18.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/pillarjs/send",
+    "publisher": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\send",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\send\\LICENSE"
+  },
+  "serve-static@1.15.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/expressjs/serve-static",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\serve-static",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\serve-static\\LICENSE"
+  },
+  "setprototypeof@1.2.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/wesleytodd/setprototypeof",
+    "publisher": "Wes Todd",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\setprototypeof",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\setprototypeof\\LICENSE"
+  },
+  "side-channel@1.0.4": {
+    "licenses": "MIT",
+    "repository": "https://github.com/ljharb/side-channel",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\side-channel",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\side-channel\\LICENSE"
+  },
+  "sift@16.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/crcn/sift.js",
+    "publisher": "Craig Condon",
+    "email": "craig.j.condon@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\sift",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\sift\\README.md"
+  },
+  "simple-update-notifier@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/alexbrazier/simple-update-notifier",
+    "publisher": "alexbrazier",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\simple-update-notifier",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\simple-update-notifier\\LICENSE"
+  },
+  "slide@1.1.6": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/slide-flow-control",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\slide",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\slide\\LICENSE"
+  },
+  "smart-buffer@4.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/JoshGlazebrook/smart-buffer",
+    "publisher": "Josh Glazebrook",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\smart-buffer",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\smart-buffer\\LICENSE"
+  },
+  "socks@2.6.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/JoshGlazebrook/socks",
+    "publisher": "Josh Glazebrook",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\socks",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\socks\\LICENSE"
+  },
+  "source-map@0.6.1": {
+    "licenses": "BSD-3-Clause",
+    "repository": "https://github.com/mozilla/source-map",
+    "publisher": "Nick Fitzgerald",
+    "email": "nfitzgerald@mozilla.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\source-map",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\source-map\\LICENSE"
+  },
+  "sparse-bitfield@3.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/sparse-bitfield",
+    "publisher": "Mathias Buus",
+    "url": "@mafintosh",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\sparse-bitfield",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\sparse-bitfield\\LICENSE"
+  },
+  "spdx-compare@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/kemitchell/spdx-compare.js",
+    "publisher": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "https://kemitchell.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-compare",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-compare\\LICENSE.md"
+  },
+  "spdx-correct@3.1.1": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/jslicense/spdx-correct.js",
+    "publisher": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "https://kemitchell.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-correct",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-correct\\LICENSE"
+  },
+  "spdx-exceptions@2.3.0": {
+    "licenses": "CC-BY-3.0",
+    "repository": "https://github.com/kemitchell/spdx-exceptions.json",
+    "publisher": "The Linux Foundation",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-exceptions",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-exceptions\\README.md"
+  },
+  "spdx-expression-parse@3.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jslicense/spdx-expression-parse.js",
+    "publisher": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "https://kemitchell.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-expression-parse",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-expression-parse\\LICENSE"
+  },
+  "spdx-license-ids@3.0.12": {
+    "licenses": "CC0-1.0",
+    "repository": "https://github.com/jslicense/spdx-license-ids",
+    "publisher": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-license-ids",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-license-ids\\README.md"
+  },
+  "spdx-ranges@2.1.1": {
+    "licenses": "(MIT AND CC-BY-3.0)",
+    "repository": "https://github.com/kemitchell/spdx-ranges.js",
+    "publisher": "The Linux Foundation",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-ranges",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-ranges\\LICENSE.md"
+  },
+  "spdx-satisfies@4.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/kemitchell/spdx-satisfies.js",
+    "publisher": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "https://kemitchell.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-satisfies",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\spdx-satisfies\\LICENSE"
+  },
+  "ssf@0.11.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/ssf",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ssf",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ssf\\LICENSE"
+  },
+  "statuses@2.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/statuses",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\statuses",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\statuses\\LICENSE"
+  },
+  "string_decoder@1.3.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/nodejs/string_decoder",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\string_decoder",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\string_decoder\\LICENSE"
+  },
+  "supports-color@5.5.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/chalk/supports-color",
+    "publisher": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\supports-color",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\supports-color\\license"
+  },
+  "supports-preserve-symlinks-flag@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/inspect-js/node-supports-preserve-symlinks-flag",
+    "publisher": "Jordan Harband",
+    "email": "ljharb@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\supports-preserve-symlinks-flag",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\supports-preserve-symlinks-flag\\LICENSE"
+  },
+  "tar-fs@2.1.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/tar-fs",
+    "publisher": "Mathias Buus",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\tar-fs",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\tar-fs\\LICENSE"
+  },
+  "tar-stream@2.2.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/mafintosh/tar-stream",
+    "publisher": "Mathias Buus",
+    "email": "mathiasbuus@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\tar-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\tar-stream\\LICENSE"
+  },
+  "taskmanager@1.0.0": {
+    "licenses": "MIT",
+    "publisher": "Oleksandr Tsvik",
+    "path": "D:\\Programming projects\\Web\\TaskManager",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\LICENSE"
+  },
+  "through@2.3.8": {
+    "licenses": "MIT",
+    "repository": "https://github.com/dominictarr/through",
+    "publisher": "Dominic Tarr",
+    "email": "dominic.tarr@gmail.com",
+    "url": "dominictarr.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\through",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\through\\LICENSE.APACHE2"
+  },
+  "to-regex-range@5.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/micromatch/to-regex-range",
+    "publisher": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\to-regex-range",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\to-regex-range\\LICENSE"
+  },
+  "toidentifier@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/component/toidentifier",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\toidentifier",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\toidentifier\\LICENSE"
+  },
+  "touch@3.1.0": {
+    "licenses": "ISC",
+    "repository": "https://github.com/isaacs/node-touch",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\touch",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\touch\\LICENSE"
+  },
+  "tr46@0.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/Sebmaster/tr46.js",
+    "publisher": "Sebastian Mayr",
+    "email": "npm@smayr.name",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\tr46"
+  },
+  "tr46@3.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jsdom/tr46",
+    "publisher": "Sebastian Mayr",
+    "email": "npm@smayr.name",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\tr46",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\tr46\\LICENSE.md"
+  },
+  "treeify@1.1.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/notatestuser/treeify",
+    "publisher": "Luke Plaster",
+    "email": "notatestuser@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\treeify",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\treeify\\LICENSE"
+  },
+  "type-is@1.6.18": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/type-is",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\type-is",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\type-is\\LICENSE"
+  },
+  "uglify-js@3.15.4": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/mishoo/UglifyJS",
+    "publisher": "Mihai Bazon",
+    "email": "mihai.bazon@gmail.com",
+    "url": "http://lisperator.net/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\uglify-js",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\uglify-js\\LICENSE"
+  },
+  "unbzip2-stream@1.4.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/regular/unbzip2-stream",
+    "publisher": "Jan Bölsche",
+    "email": "jan@lagomorph.de",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\unbzip2-stream",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\unbzip2-stream\\LICENSE"
+  },
+  "undefsafe@2.0.5": {
+    "licenses": "MIT",
+    "repository": "https://github.com/remy/undefsafe",
+    "publisher": "Remy Sharp",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\undefsafe",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\undefsafe\\LICENSE"
+  },
+  "unpipe@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/stream-utils/unpipe",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\unpipe",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\unpipe\\LICENSE"
+  },
+  "util-deprecate@1.0.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/TooTallNate/util-deprecate",
+    "publisher": "Nathan Rajlich",
+    "email": "nathan@tootallnate.net",
+    "url": "http://n8.io/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\util-deprecate",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\util-deprecate\\LICENSE"
+  },
+  "util-extend@1.0.3": {
+    "licenses": "MIT",
+    "repository": "https://github.com/isaacs/util-extend",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\util-extend",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\util-extend\\LICENSE"
+  },
+  "utils-merge@1.0.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jaredhanson/utils-merge",
+    "publisher": "Jared Hanson",
+    "email": "jaredhanson@gmail.com",
+    "url": "http://www.jaredhanson.net/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\utils-merge",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\utils-merge\\LICENSE"
+  },
+  "validate-npm-package-license@3.0.4": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/kemitchell/validate-npm-package-license.js",
+    "publisher": "Kyle E. Mitchell",
+    "email": "kyle@kemitchell.com",
+    "url": "https://kemitchell.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\validate-npm-package-license",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\validate-npm-package-license\\LICENSE"
+  },
+  "vary@1.1.2": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jshttp/vary",
+    "publisher": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\vary",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\vary\\LICENSE"
+  },
+  "walk@2.3.15": {
+    "licenses": "(MIT OR Apache-2.0)",
+    "repository": "https://git.coolaj86.com/coolaj86/fs-walk.js",
+    "publisher": "AJ ONeal",
+    "email": "coolaj86@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\walk",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\walk\\LICENSE"
+  },
+  "webidl-conversions@3.0.1": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/jsdom/webidl-conversions",
+    "publisher": "Domenic Denicola",
+    "email": "d@domenic.me",
+    "url": "https://domenic.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\webidl-conversions",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\webidl-conversions\\LICENSE.md"
+  },
+  "webidl-conversions@7.0.0": {
+    "licenses": "BSD-2-Clause",
+    "repository": "https://github.com/jsdom/webidl-conversions",
+    "publisher": "Domenic Denicola",
+    "email": "d@domenic.me",
+    "url": "https://domenic.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\webidl-conversions",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\webidl-conversions\\LICENSE.md"
+  },
+  "whatwg-url@11.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jsdom/whatwg-url",
+    "publisher": "Sebastian Mayr",
+    "email": "github@smayr.name",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\whatwg-url",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\whatwg-url\\LICENSE.txt"
+  },
+  "whatwg-url@5.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/jsdom/whatwg-url",
+    "publisher": "Sebastian Mayr",
+    "email": "github@smayr.name",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\whatwg-url",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\cross-fetch\\node_modules\\whatwg-url\\LICENSE.txt"
+  },
+  "wmf@1.0.2": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/js-wmf",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\wmf",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\wmf\\LICENSE"
+  },
+  "word@0.3.0": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/js-word",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\word",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\word\\LICENSE"
+  },
+  "wordwrap@1.0.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/substack/node-wordwrap",
+    "publisher": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\wordwrap",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\wordwrap\\LICENSE"
+  },
+  "wrappy@1.0.2": {
+    "licenses": "ISC",
+    "repository": "https://github.com/npm/wrappy",
+    "publisher": "Isaac Z. Schlueter",
+    "email": "i@izs.me",
+    "url": "http://blog.izs.me/",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\wrappy",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\wrappy\\LICENSE"
+  },
+  "ws@8.8.1": {
+    "licenses": "MIT",
+    "repository": "https://github.com/websockets/ws",
+    "publisher": "Einar Otto Stangvik",
+    "email": "einaros@gmail.com",
+    "url": "http://2x.io",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ws",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\ws\\LICENSE"
+  },
+  "xlsx@0.18.5": {
+    "licenses": "Apache-2.0",
+    "repository": "https://github.com/SheetJS/sheetjs",
+    "publisher": "sheetjs",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\xlsx",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\xlsx\\LICENSE"
+  },
+  "yauzl@2.10.0": {
+    "licenses": "MIT",
+    "repository": "https://github.com/thejoshwolfe/yauzl",
+    "publisher": "Josh Wolfe",
+    "email": "thejoshwolfe@gmail.com",
+    "path": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\yauzl",
+    "licenseFile": "D:\\Programming projects\\Web\\TaskManager\\node_modules\\yauzl\\LICENSE"
+  }
+}
