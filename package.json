@@ -1,7 +1,10 @@
 {
   "name": "taskmanager",
-  "version": "1.0.0",
   "description": "Task Manager and schedule parsing for ztu.edu.ua",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Oleksandr Tsvik",
+  "email": "ipz203_tsos@student.ztu.edu.ua",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.27.2",
@@ -19,8 +22,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon -e js,hbs,json app.js"
-  },
-  "author": "Oleksandr Tsvik",
-  "email": "ipz203_tsos@student.ztu.edu.ua",
-  "license": "ISC"
+  }
 }
