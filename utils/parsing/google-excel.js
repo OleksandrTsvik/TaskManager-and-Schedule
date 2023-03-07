@@ -3,6 +3,7 @@ const xlsx = require('xlsx');
 
 const { SETTINGS_KEYS, UA_DAY_TO_NUMBER } = require('../../config/config');
 const { getSettingsValueByKey } = require('../settings');
+const { upperCaseFirst } = require('../upperCaseFirst');
 
 async function getOptionalSubjects() {
     const fileURL = await getSettingsValueByKey(SETTINGS_KEYS.linkOptionalSubjects);
@@ -30,14 +31,19 @@ async function getOptionalSubjects() {
     // console.log(sheet01JSON[0]);
 
     sheet01JSON = sheet01JSON.map(obj => {
+        let groups = [];
+        if (obj.G) {
+            groups = [obj.G.trim()];
+        }
+
         return {
             week: 1,
-            weekday: UA_DAY_TO_NUMBER[obj.F],
+            weekday: UA_DAY_TO_NUMBER[upperCaseFirst(obj.F)],
             time: obj.B,
             subject: obj.C,
-            teacher: obj.D.split(/,\s*/).filter(str => str.trim().length > 0),
+            teacher: obj.D.split(/,\s*/).filter(str => str && str.trim().length > 0),
             classRoom: obj.E,
-            groups: [obj.G.trim()],
+            groups,
             selective: true
         };
     });
