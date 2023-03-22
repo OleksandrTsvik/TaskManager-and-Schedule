@@ -146,3 +146,20 @@ textarea.resize-none {
 .cursor-pointer {
     cursor: pointer !important;
 }
+
+.container-text-color {
+    border-bottom: 1px solid transparent;
+}
+
+.colors-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+.colors-used .color-used {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}

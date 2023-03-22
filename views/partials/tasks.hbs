@@ -42,13 +42,19 @@
                         </div>
                     </div>
                     <div class="collapsible px-4 py-2">
-                        <div class="d-flex align-items-center gap-05 mb-2">
-                            Колір тексту:
-                            <input type="color" value="{{ this.color }}" class="flex-grow-1 text-color" />
+                        <div class="d-flex gap-05 mb-3 pb-3 container-text-color" style="border-bottom-color: {{ this.color }} !important;">
+                            <span class="text-nowrap">Колір тексту:</span>
+                            <div class="d-flex justify-content-between flex-column w-100">
+                                <div class="colors-used"></div>
+                                <input type="color" value="{{ this.color }}" class="w-100 text-color" />
+                            </div>
                         </div>
-                        <div class="d-flex align-items-center gap-05">
-                            Колір фону:
-                            <input type="color" value="{{ this.backgroundColor }}" class="flex-grow-1 background-color" />
+                        <div class="d-flex gap-05 container-background-color">
+                            <span class="text-nowrap">Колір фону:</span>
+                            <div class="d-flex justify-content-between flex-column w-100">
+                                <div class="colors-used"></div>
+                                <input type="color" value="{{ this.backgroundColor }}" class="w-100 background-color" />
+                            </div>
                         </div>
                     </div>
                 {{/if}}
