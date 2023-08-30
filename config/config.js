@@ -16,8 +16,12 @@ const SETTINGS_KEYS = {
     cabinetPassword: 'cabinetPassword',
     arrayGroups: 'arrGroups',
     arraySubjects: 'arrSubjects',
-    dateFirstWeekSchedule: 'dateFirstWeekSchedule',
+    dateFirstWeekSchedule: 'dateFirstWeekSchedule'
 };
+
+const OPTIONAL_SETTINGS_KEYS = [
+    SETTINGS_KEYS.linkOptionalSubjects
+];
 
 const ENCRYPTION_KEY = 'KFgGqtJyFL50vJpsCFOh9UBm4dxhc9XY';
 const ENCRYPTION_IV = 'Gw7fVhXY520ofTHw';
@@ -41,7 +45,7 @@ const UA_DAY_TO_NUMBER = {
 
 module.exports = {
     MONGO_URL, PORT, URL,
-    SETTINGS_KEYS,
+    SETTINGS_KEYS, OPTIONAL_SETTINGS_KEYS,
     ENCRYPTION_KEY, ENCRYPTION_IV, ENCRYPTION_ALGORITHM, ENCRYPTION_FIELDS,
     UA_DAY_TO_NUMBER,
     MS_PER_DAY

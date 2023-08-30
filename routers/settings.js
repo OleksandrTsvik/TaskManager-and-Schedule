@@ -1,7 +1,7 @@
 const createError = require("http-errors");
 const express = require('express');
 
-const { SETTINGS_KEYS, ENCRYPTION_FIELDS } = require('../config/config');
+const { SETTINGS_KEYS, OPTIONAL_SETTINGS_KEYS, ENCRYPTION_FIELDS } = require('../config/config');
 const models = require('../models/index');
 const crypt = require('../utils/encryption');
 const { getSettingsValueByKey } = require("../utils/settings");
@@ -42,7 +42,7 @@ router.post('/settings', async (req, res, next) => {
             if (req.body.hasOwnProperty(param)) {
                 let bodyValue = req.body[param];
 
-                if (bodyValue) {
+                if (bodyValue || OPTIONAL_SETTINGS_KEYS.includes(param)) {
                     if (ENCRYPTION_FIELDS.includes(param)) {
                         bodyValue = crypt.encryption(bodyValue);
                     }

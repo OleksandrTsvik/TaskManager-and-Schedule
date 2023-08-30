@@ -123,7 +123,7 @@ router.get('/schedule', async (req, res, next) => {
 router.get('/schedule/update', async (req, res, next) => {
     try {
         let schedule = await getSchedule();
-        let optionalSubjects = await getOptionalSubjects();
+        let optionalSubjects = await getOptionalSubjects() || [];
 
         let lastArrSubjects = await getSettingsValueByKey(SETTINGS_KEYS.arraySubjects);
         let lastArrGroups = await getSettingsValueByKey(SETTINGS_KEYS.arrayGroups);

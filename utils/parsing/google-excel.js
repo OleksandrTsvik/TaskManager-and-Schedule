@@ -8,6 +8,10 @@ const { upperCaseFirst } = require('../upperCaseFirst');
 async function getOptionalSubjects() {
     const fileURL = await getSettingsValueByKey(SETTINGS_KEYS.linkOptionalSubjects);
 
+    if (!fileURL) {
+        return;
+    }
+
     const response = await axios({
         method: 'GET',
         url: fileURL,
@@ -17,7 +21,7 @@ async function getOptionalSubjects() {
     if (response.status !== 200) {
         console.log('STATUS CODE:', response.status);
 
-        return null;
+        return;
     }
 
     const workbook = xlsx.read(response.data);
