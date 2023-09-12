@@ -33,7 +33,8 @@ router.get('/schedule', async (req, res, next) => {
 
         let nowDate = new Date();
         let firstWeekScheduleDate = new Date(await getSettingsValueByKey(SETTINGS_KEYS.dateFirstWeekSchedule));
-        let numberWeek = Math.trunc(Math.ceil(Math.abs(nowDate - firstWeekScheduleDate) / MS_PER_DAY) / 7);
+        let timeDifference = nowDate - firstWeekScheduleDate;
+        let numberWeek = Math.floor(timeDifference / (MS_PER_DAY * 7)) + 1;
 
         let currentWeekday = nowDate.getDay();
         if (currentWeekday === 0) {
