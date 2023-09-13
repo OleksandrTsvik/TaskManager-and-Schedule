@@ -16,6 +16,28 @@ async function getSchedule() {
             return text.trim().replace(/[\s\\n]{2,}/g, ' ');
         };
 
+        const getSubjectsData = (elements, weekday, time) => {
+            const subjects = [];
+
+            for (const elem of elements) {
+                if (elem.children.length < 4) {
+                    continue;
+                }
+
+                subjects.push({
+                    week,
+                    weekday,
+                    time,
+                    subject: deleteWhitespace(elem.children[1].textContent),
+                    teacher: deleteWhitespace(elem.children[3].textContent).split(/,\s*/).filter(str => str.trim().length > 0),
+                    classRoom: deleteWhitespace(elem.children[2].textContent),
+                    groups: deleteWhitespace(elem.children[0].textContent).split(/,\s*/).filter(str => str.trim().length > 0)
+                });
+            }
+
+            return subjects;
+        };
+
         let tables = document.querySelectorAll('table.schedule');
 
         let data = [];
@@ -32,19 +54,9 @@ async function getSchedule() {
                 }
 
                 for (let cell of tr.querySelectorAll('td')) {
-                    let variative = cell.querySelector('div.variative');
+                    let arrVariative = cell.querySelectorAll('div.variative');
 
-                    if (variative && variative.children.length >= 4) {
-                        data.push({
-                            week,
-                            weekday,
-                            time,
-                            subject: deleteWhitespace(variative.children[1].textContent),
-                            teacher: deleteWhitespace(variative.children[3].textContent).split(/,\s*/).filter(str => str.trim().length > 0),
-                            classRoom: deleteWhitespace(variative.children[2].textContent),
-                            groups: deleteWhitespace(variative.children[0].textContent).split(/,\s*/).filter(str => str.trim().length > 0)
-                        });
-                    }
+                    data.push(...getSubjectsData(arrVariative, weekday, time));
 
                     weekday++;
                 }
