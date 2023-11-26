@@ -1,52 +1,52 @@
 <div class="modal fade" id="modal-add-task" tabindex="-1" style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add new task</h5>
-                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add new task</h5>
+        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form method="post" action="/">
+          <div class="form-outline mb-4">
+            <input type="text" name="title" id="title" class="form-control" list="list-add-title">
+            <label class="form-label" for="title" style="margin-left: 0;">Title</label>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px;"></div>
+              <div class="form-notch-middle" style="width: 8px;"></div>
+              <div class="form-notch-trailing"></div>
             </div>
-            <div class="modal-body p-4">
-                <form method="post" action="/">
-                    <div class="form-outline mb-4">
-                        <input type="text" name="title" id="title" class="form-control" list="list-add-title">
-                        <label class="form-label" for="title" style="margin-left: 0;">Title</label>
-                        <div class="form-notch">
-                            <div class="form-notch-leading" style="width: 9px;"></div>
-                            <div class="form-notch-middle" style="width: 8px;"></div>
-                            <div class="form-notch-trailing"></div>
-                        </div>
 
-                        <datalist id="list-add-title">
-                            {{#each heads }}
-                                <option value="{{ this.text }}">
-                            {{/each}}
-                        </datalist>
-                    </div>
+            <datalist id="list-add-title">
+              {{#each heads }}
+              <option value="{{ this.text }}">
+              {{/each}}
+            </datalist>
+          </div>
 
-                    <div class="form-outline mb-4">
-                        <textarea class="form-control resize-none" name="description" id="description"></textarea>
-                        <label class="form-label" for="description" style="margin-left: 0;">Description</label>
+          <div class="form-outline mb-4">
+            <textarea class="form-control resize-none" name="description" id="description"></textarea>
+            <label class="form-label" for="description" style="margin-left: 0;">Description</label>
 
-                        <div class="form-notch">
-                            <div class="form-notch-leading" style="width: 9px;"></div>
-                            <div class="form-notch-middle" style="width: 8px;"></div>
-                            <div class="form-notch-trailing"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label" for="color">Text color</label>
-                        <input type="color" value="#000000" class="form-control p-0" name="color" id="color">
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label" for="backgroundColor">Background color</label>
-                        <input type="color" value="#ffffff" class="form-control p-0" name="backgroundColor" id="backgroundColor">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-block mb-1 fw-bold fs-4 text-no-transform">Add task</button>
-                </form>
+            <div class="form-notch">
+              <div class="form-notch-leading" style="width: 9px;"></div>
+              <div class="form-notch-middle" style="width: 8px;"></div>
+              <div class="form-notch-trailing"></div>
             </div>
-        </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label" for="color">Text color</label>
+            <input type="color" value="#000000" class="form-control p-0" name="color" id="color">
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label" for="backgroundColor">Background color</label>
+            <input type="color" value="#ffffff" class="form-control p-0" name="backgroundColor" id="backgroundColor">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block mb-1 fw-bold fs-4 text-no-transform">Add task</button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>

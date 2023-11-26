@@ -1,48 +1,58 @@
+const path = require('path');
 const express = require('express');
 const expressHbs = require('express-handlebars');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 
-const connectDB = require('./db/mongoose');
-const router = require('./routers/index');
+require('dotenv').config();
 
-const { PORT, URL } = require('./config/config');
-const helpers = require('./config/helpers');
-const errors = require('./config/errors');
+const { PORT, URL, MONGO_URL } = require('./config/app.conf');
+
+const connectDB = require('./db/connect');
+const helpers = require('./utils/helpers.util');
+
+const notFoundMiddleware = require('./middleware/not-found.middleware');
+const errorHandlerMiddleware = require('./middleware/error-handler.middleware');
 
 const app = express();
 
-app.engine('hbs', expressHbs.engine({
+app.engine(
+  'hbs',
+  expressHbs.engine({
     layoutsDir: 'views/layouts',
     defaultLayout: 'layout',
     extname: 'hbs',
-    helpers: helpers
-}));
+    helpers,
+  }),
+);
 
 app.set('view engine', 'hbs');
 app.use('/static', express.static('static'));
-app.use('/alien', express.static('alien'));
 
-hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 
-app.use(router.task);
-app.use(router.heading);
-app.use(router.schedule);
-app.use(router.settings);
+app.use('/heading', require('./routes/heading.route'));
+app.use('/schedule', require('./routes/schedule.route'));
+app.use('/settings', require('./routes/settings.route'));
+app.use('/', require('./routes/task.route'));
 
-app.use(errors.errorGeneration404);
-app.use(errors.errorHandling);
+app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
 
-connectDB()
-    .then(() => {
-        app.listen(PORT, () => {
-            console.log(`Listening on port ${ PORT }, url: ${ URL }`);
-        });
-    })
-    .catch((err) => {
-        console.log(err.message);
+const start = async () => {
+  try {
+    await connectDB(MONGO_URL);
+
+    app.listen(PORT, () => {
+      console.log(`Listening on port ${PORT}, url: ${URL}`);
     });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+start();

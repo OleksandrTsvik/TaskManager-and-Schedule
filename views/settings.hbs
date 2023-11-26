@@ -1,145 +1,146 @@
 <div class="container">
-    <h2 class="text-center mt-2">{{ title }}</h2>
+  <h2 class="text-center mt-2">{{ title }}</h2>
 
-    <!-- Tabs navs -->
-    <ul class="nav nav-tabs mb-3" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" href="#tabs-general"
-               data-mdb-toggle="tab" role="tab"
-               aria-controls="tabs-general"
-               aria-selected="true"
-            >General</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" href="#tabs-schedule"
-               data-mdb-toggle="tab" role="tab"
-               aria-controls="tabs-schedule"
-               aria-selected="false"
-            >Schedule</a>
-        </li>
-    </ul>
-    <!-- Tabs navs -->
+  <!-- Tabs navs -->
+  <ul class="nav nav-tabs mb-3" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" href="#tabs-general"
+         data-mdb-toggle="tab" role="tab"
+         aria-controls="tabs-general"
+         aria-selected="true"
+      >General</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" href="#tabs-schedule"
+         data-mdb-toggle="tab" role="tab"
+         aria-controls="tabs-schedule"
+         aria-selected="false"
+      >Schedule</a>
+    </li>
+  </ul>
+  <!-- Tabs navs -->
 
-    <!-- Tabs content -->
-    <div class="tab-content">
-        <div class="tab-pane fade show active" id="tabs-general"
-             role="tabpanel" aria-labelledby="tabs-general"
-        >
-            <form method="post" action="/settings">
-                <div class="form-group mb-5">
-                    <label for="countDaysDisplayLastCompletedTasks">The number of days to display the last completed tasks</label>
-                    <input type="number" class="form-control" value="{{inputNames.countDaysDisplayLastCompletedTasks}}"
-                           name="countDaysDisplayLastCompletedTasks" id="countDaysDisplayLastCompletedTasks">
-                </div>
-
-                <div class="form-group mb-5">
-                    <label for="dateFirstWeekSchedule">The date of the first week of the schedule</label>
-                    <input type="date" class="form-control" value="{{inputNames.dateFirstWeekSchedule}}"
-                           name="dateFirstWeekSchedule" id="dateFirstWeekSchedule">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="linkSchedule">Link to schedule</label>
-                    <input type="text" class="form-control" value="{{inputNames.linkSchedule}}"
-                           name="linkSchedule" id="linkSchedule">
-                </div>
-
-                <div class="form-group mb-5">
-                    <label for="linkOptionalSubjects">Links to optional subjects</label>
-                    <input type="text" class="form-control" value="{{inputNames.linkOptionalSubjects}}"
-                           name="linkOptionalSubjects" id="linkOptionalSubjects">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="linkLoginCabinet">Link to enter the cabinet</label>
-                    <input type="text" class="form-control" value="{{inputNames.linkLoginCabinet}}"
-                           name="linkLoginCabinet" id="linkLoginCabinet">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="linkScheduleCabinet">Link to cabinet schedule</label>
-                    <input type="text" class="form-control" value="{{inputNames.linkScheduleCabinet}}"
-                           name="linkScheduleCabinet" id="linkScheduleCabinet">
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="cabinetLogin">Login from the cabinet</label>
-                    <input type="text" class="form-control" value="{{inputNames.cabinetLogin}}"
-                           name="cabinetLogin" id="cabinetLogin">
-                </div>
-
-                <div class="form-group mb-5">
-                    <label for="cabinetPassword">Password from the cabinet</label>
-                    <input type="password" class="form-control"
-                           name="cabinetPassword" id="cabinetPassword">
-                </div>
-
-                <div class="form-group row mb-3">
-                    <div class="col text-end">
-                        <button type="submit" class="btn btn-primary w-25 fs-6 fw-bold text-capitalize">Save</button>
-                    </div>
-                </div>
-            </form>
+  <!-- Tabs content -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="tabs-general"
+         role="tabpanel" aria-labelledby="tabs-general"
+    >
+      <form method="post" action="/settings">
+        <div class="form-group mb-5">
+          <label for="countDaysDisplayLastCompletedTasks">The number of days to display the last completed tasks</label>
+          <input type="number" class="form-control" value="{{inputNames.countDaysDisplayLastCompletedTasks}}"
+                 name="countDaysDisplayLastCompletedTasks" id="countDaysDisplayLastCompletedTasks">
         </div>
 
-        <div class="tab-pane fade" id="tabs-schedule" role="tabpanel" aria-labelledby="tabs-schedule">
-            <h3>Groups</h3>
-            <div class="groups d-flex flex-wrap gap-05 mb-5">
-                {{#each inputNames.arrGroups }}
-                    <button type="button" class="btn {{#if this.selected }}btn-dark{{else}}btn-light{{/if}}">
-                        {{{ this.group }}}
-                    </button>
-                {{/each }}
-            </div>
-
-            <h3>Subjects</h3>
-            <div class="subjects d-flex flex-wrap gap-05 mb-5">
-                {{#each inputNames.arrSubjects }}
-                    <button type="button" class="btn {{#if this.selected }}btn-dark{{else}}btn-light{{/if}} fs-6 text-no-transform">
-                        {{{ this.subject }}}
-                    </button>
-                {{/each }}
-            </div>
-
-            <h3>Selective subjects</h3>
-            <div class="table-responsive mb-5">
-                <table class="table table-hover align-middle table-sm">
-                    <thead class="table-info align-middle">
-                        <tr>
-                            <th>#</th>
-                            <th>Time</th>
-                            <th>Subject</th>
-                            <th>Teacher</th>
-                            <th>Class Room</th>
-                            <th>Weekday</th>
-                            <th>Group</th>
-                        </tr>
-                    </thead>
-                    <tbody class="selective-subjects">
-                        {{#each selectiveSubjects }}
-                            <tr data-subject-id="{{ this._id }}" class="cursor-pointer {{#if this.show }}table-dark{{/if}}">
-                                <td>{{ increment @index }}</td>
-                                <td>{{ this.time }}</td>
-                                <td>{{{ this.subject }}}</td>
-                                <td>{{{ this.teacher }}}</td>
-                                <td>{{ this.classRoom }}</td>
-                                <td>{{ numberToEnglishDay this.weekday }}</td>
-                                <td>{{ this.groups }}</td>
-                            </tr>
-                        {{/each}}
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="form-group row mb-3">
-                <div class="col text-end">
-                    <a href="/schedule/update" class="btn btn-outline-primary fs-6 fw-bold text-no-transform me-3"
-                        >Download the schedule</a>
-                </div>
-            </div>
+        <div class="form-group mb-5">
+          <label for="dateFirstWeekSchedule">The date of the first week of the schedule</label>
+          <input type="date" class="form-control" value="{{inputNames.dateFirstWeekSchedule}}"
+                 name="dateFirstWeekSchedule" id="dateFirstWeekSchedule">
         </div>
+
+        <div class="form-group mb-3">
+          <label for="linkSchedule">Link to schedule</label>
+          <input type="text" class="form-control" value="{{inputNames.linkSchedule}}"
+                 name="linkSchedule" id="linkSchedule">
+        </div>
+
+        <div class="form-group mb-5">
+          <label for="linkOptionalSubjects">Links to optional subjects</label>
+          <input type="text" class="form-control" value="{{inputNames.linkOptionalSubjects}}"
+                 name="linkOptionalSubjects" id="linkOptionalSubjects">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="linkLoginCabinet">Link to enter the cabinet</label>
+          <input type="text" class="form-control" value="{{inputNames.linkLoginCabinet}}"
+                 name="linkLoginCabinet" id="linkLoginCabinet">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="linkScheduleCabinet">Link to cabinet schedule</label>
+          <input type="text" class="form-control" value="{{inputNames.linkScheduleCabinet}}"
+                 name="linkScheduleCabinet" id="linkScheduleCabinet">
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="cabinetLogin">Login from the cabinet</label>
+          <input type="text" class="form-control" value="{{inputNames.cabinetLogin}}"
+                 name="cabinetLogin" id="cabinetLogin">
+        </div>
+
+        <div class="form-group mb-5">
+          <label for="cabinetPassword">Password from the cabinet</label>
+          <input type="password" class="form-control"
+                 name="cabinetPassword" id="cabinetPassword">
+        </div>
+
+        <div class="form-group row mb-3">
+          <div class="col text-end">
+            <button type="submit" class="btn btn-primary w-25 fs-6 fw-bold text-capitalize">Save</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <!-- Tabs content -->
+
+    <div class="tab-pane fade" id="tabs-schedule" role="tabpanel" aria-labelledby="tabs-schedule">
+      <h3>Groups</h3>
+      <div class="groups d-flex flex-wrap gap-05 mb-5">
+        {{#each inputNames.arrGroups }}
+          <button type="button" class="btn {{#if this.selected }}btn-dark{{else}}btn-light{{/if}}">
+            {{{ this.group }}}
+          </button>
+        {{/each }}
+      </div>
+
+      <h3>Subjects</h3>
+      <div class="subjects d-flex flex-wrap gap-05 mb-5">
+        {{#each inputNames.arrSubjects }}
+          <button type="button"
+                  class="btn {{#if this.selected }}btn-dark{{else}}btn-light{{/if}} fs-6 text-no-transform">
+            {{{ this.subject }}}
+          </button>
+        {{/each }}
+      </div>
+
+      <h3>Selective subjects</h3>
+      <div class="table-responsive mb-5">
+        <table class="table table-hover align-middle table-sm">
+          <thead class="table-info align-middle">
+          <tr>
+            <th>#</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+            <th>Class Room</th>
+            <th>Weekday</th>
+            <th>Group</th>
+          </tr>
+          </thead>
+          <tbody class="selective-subjects">
+          {{#each selectiveSubjects }}
+            <tr data-subject-id="{{ this._id }}" class="cursor-pointer {{#if this.show }}table-dark{{/if}}">
+              <td>{{ increment @index }}</td>
+              <td>{{ this.time }}</td>
+              <td>{{{ this.subject }}}</td>
+              <td>{{{ this.teacher }}}</td>
+              <td>{{ this.classRoom }}</td>
+              <td>{{ numberToEnglishDay this.weekday }}</td>
+              <td>{{ this.groups }}</td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="form-group row mb-3">
+        <div class="col text-end">
+          <a href="/schedule/update" class="btn btn-outline-primary fs-6 fw-bold text-no-transform me-3"
+          >Download the schedule</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Tabs content -->
 </div>
 
 <script src="/static/js/settings-schedule.js"></script>

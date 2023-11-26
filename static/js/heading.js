@@ -1,57 +1,62 @@
 const modalHeading = document.querySelector('#modal-heading');
 const modalTitle = modalHeading.querySelector('h5.modal-title');
-const modalBtnSubmit = modalHeading.querySelector('div.modal-footer button[type="submit"]');
+const modalBtnSubmit = modalHeading.querySelector(
+  'div.modal-footer button[type="submit"]',
+);
 const modalForm = modalHeading.querySelector('#form-heading');
 const modalFormInputText = modalForm.querySelector('#text');
 const btnAddHeading = document.querySelector('#add-heading');
 
 btnAddHeading.addEventListener('click', () => {
-    modalForm.action = '/tasks/heading';
-    modalTitle.innerHTML = 'Add heading';
+  modalForm.action = '/heading';
+  modalTitle.innerHTML = 'Add heading';
 
-    modalFormInputText.classList.remove('active');
-    modalFormInputText.value = '';
+  modalFormInputText.classList.remove('active');
+  modalFormInputText.value = '';
 
-    modalBtnSubmit.innerHTML = 'Add heading';
+  modalBtnSubmit.innerHTML = 'Add heading';
 });
 
 const modalDeleteHeading = document.querySelector('#modal-delete-heading');
 
 if (modalDeleteHeading) {
-    const modalDeleteHeadingText = modalDeleteHeading.querySelector('div.modal-body h4');
-    const modalDeleteHeadingLink = modalDeleteHeading.querySelector('div.modal-footer a[type="button"]');
+  const modalDeleteHeadingText =
+    modalDeleteHeading.querySelector('div.modal-body h4');
+  const modalDeleteHeadingLink = modalDeleteHeading.querySelector(
+    'div.modal-footer a[type="button"]',
+  );
 
-    const classes = {
-        'btn-edit': headingEdit,
-        'btn-delete': headingDelete
-    };
+  const classes = {
+    'btn-edit': headingEdit,
+    'btn-delete': headingDelete,
+  };
 
-    const keysClasses = Object.keys(classes);
+  const keysClasses = Object.keys(classes);
 
-    document.body.addEventListener('click', function(event) {
-        for (let i = 0; i < keysClasses.length; i++) {
-            let elem = event.target.closest(`button.${keysClasses[i]}`);
+  document.body.addEventListener('click', function (event) {
+    for (let i = 0; i < keysClasses.length; i++) {
+      let elem = event.target.closest(`button.${keysClasses[i]}`);
 
-            if (elem) {
-                let id = elem.parentNode.dataset.headingId;
-                let text = elem.parentNode.previousElementSibling.textContent.trim();
+      if (elem) {
+        let id = elem.parentNode.dataset.headingId;
+        let text = elem.parentNode.previousElementSibling.textContent.trim();
 
-                classes[keysClasses[i]](elem, id, text);
+        classes[keysClasses[i]](elem, id, text);
 
-                break;
-            }
-        }
-    });
-
-    function headingEdit(btn, id, text) {
-        modalForm.action = `/tasks/heading?edit=${id}`;
-        modalTitle.innerHTML = 'Edit heading';
-        modalFormInputText.value = text;
-        modalBtnSubmit.innerHTML = 'Save';
+        break;
+      }
     }
+  });
 
-    function headingDelete(btn, id, text) {
-        modalDeleteHeadingText.innerHTML = text;
-        modalDeleteHeadingLink.href = `/tasks/heading/delete/${id}`;
-    }
+  function headingEdit(btn, id, text) {
+    modalForm.action = `/heading?edit=${id}`;
+    modalTitle.innerHTML = 'Edit heading';
+    modalFormInputText.value = text;
+    modalBtnSubmit.innerHTML = 'Save';
+  }
+
+  function headingDelete(btn, id, text) {
+    modalDeleteHeadingText.innerHTML = text;
+    modalDeleteHeadingLink.href = `/heading/delete/${id}`;
+  }
 }

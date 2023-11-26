@@ -1,121 +1,123 @@
 <div class="container">
-    <!-- Tabs navs -->
-    <ul class="nav nav-tabs nav-fill mb-3" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" href="#tabs-schedule"
-               data-mdb-toggle="tab" role="tab"
-               aria-controls="tabs-schedule"
-               aria-selected="true"
-            >Schedule</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" href="#tabs-display"
-               data-mdb-toggle="tab" role="tab"
-               aria-controls="tabs-display"
-               aria-selected="false"
-            >Display</a>
-        </li>
-    </ul>
-    <!-- Tabs navs -->
+  <!-- Tabs navs -->
+  <ul class="nav nav-tabs nav-fill mb-3" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" href="#tabs-schedule"
+         data-mdb-toggle="tab" role="tab"
+         aria-controls="tabs-schedule"
+         aria-selected="true"
+      >Schedule</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" href="#tabs-display"
+         data-mdb-toggle="tab" role="tab"
+         aria-controls="tabs-display"
+         aria-selected="false"
+      >Display</a>
+    </li>
+  </ul>
+  <!-- Tabs navs -->
 </div>
 
 <!-- Errors -->
 {{#if (existFieldsInObj errors) }}
-    <div class="mx-4 alert alert-danger" role="alert" data-mdb-color="danger">
-        {{#each (getValuesFromObj errors) }}
-            <p class="mb-0">{{ this }}</p>
-        {{/each}}
-    </div>
+  <div class="mx-4 alert alert-danger" role="alert" data-mdb-color="danger">
+    {{#each (getValuesFromObj errors) }}
+      <p class="mb-0">{{ this }}</p>
+    {{/each}}
+  </div>
 {{/if}}
 <!-- Errors -->
 
 <!-- Tabs content -->
 <div class="tab-content">
-    <div class="tab-pane fade show active px-3" id="tabs-schedule"
-         role="tabpanel" aria-labelledby="tabs-schedule"
-    >
-        {{#each displaySchedule }}
-        <table class="table table-bordered table-hover align-middle text-center mb-4">
-            <thead>
-                <tr class="table-primary">
-                    <th class="px-1 bg-dark text-white"></th>
-                    {{#forLoop 1 ../countDay 1 }}
-                        <th {{#if (comparison (comparison ../../currentWeek '===' (increment @index)) '&&' (comparison ../../currentWeekday '===' this)) }}class="current-day"{{/if}}
-                            style="width: {{ operation (operation 1 '/' ../../countDay) '*' 100 }}%">{{ numberToEnglishDay this }}</th>
-                    {{/forLoop}}
-                </tr>
-            </thead>
-            <tbody>
+  <div class="tab-pane fade show active px-3" id="tabs-schedule"
+       role="tabpanel" aria-labelledby="tabs-schedule"
+  >
+    {{#each displaySchedule }}
+      <table class="table table-bordered table-hover align-middle text-center mb-4">
+        <thead>
+        <tr class="table-primary">
+          <th class="px-1 bg-dark text-white"></th>
+          {{#forLoop 1 ../countDay 1 }}
+            <th {{#if
+                  (comparison (comparison ../../currentWeek '===' (increment @index)) '&&' (comparison ../../currentWeekday '===' this)) }}class="current-day"{{/if}}
+                style="width: {{ operation (operation 1 '/' ../../countDay) '*' 100 }}%">{{ numberToEnglishDay
+              this }}</th>
+          {{/forLoop}}
+        </tr>
+        </thead>
+        <tbody>
+        {{#each this }}
+          <tr>
+            <td class="white-space-nowrap py-0 px-1 bg-dark text-white">{{ [0].time }}</td>
             {{#each this }}
-                <tr>
-                    <td class="white-space-nowrap py-0 px-1 bg-dark text-white">{{ [0].time }}</td>
-                    {{#each this }}
-                    <td {{#if this.today }}
-                            {{#if (comparison this.subject '&&' this.cabinetContent) }}
-                                class="current-day cursor-pointer"
-                                data-mdb-toggle="popover"
-                                data-mdb-custom-class="font-monospace border border-2 border-dark"
-                                data-mdb-html="true"
-                                title="{{ this.subject }}"
-                                data-mdb-content="{{ this.cabinetContent }}"
-                            {{else}}
-                                class="current-day"
-                            {{/if}}
-                    {{/if}}>
-                        {{#if this.subject }}
-                            <div>
-                                <div class="small">{{ displayArray this.groups ', ' }}</div>
-                                <div class="fs-6 fw-bold">{{ this.subject }}</div>
-                                <div class="small text-primary">{{ this.classRoom }}</div>
-                                <div class="fst-italic">{{{ displayArray this.teacher ',<br/>' }}}</div>
-                            </div>
-                        {{/if}}
-                    </td>
-                    {{/each}}
-                </tr>
+              <td {{#if this.today }}
+                {{#if (comparison this.subject '&&' this.cabinetContent) }}
+                class="current-day cursor-pointer"
+                data-mdb-toggle="popover"
+                data-mdb-custom-class="font-monospace border border-2 border-dark"
+                data-mdb-html="true"
+                title="{{ this.subject }}"
+                data-mdb-content="{{ this.cabinetContent }}"
+                {{else}}
+                class="current-day"
+                {{/if}}
+              {{/if}}>
+                {{#if this.subject }}
+                  <div>
+                    <div class="small">{{ displayArray this.groups ', ' }}</div>
+                    <div class="fs-6 fw-bold">{{ this.subject }}</div>
+                    <div class="small text-primary">{{ this.classRoom }}</div>
+                    <div class="fst-italic">{{{ displayArray this.teacher ',<br/>' }}}</div>
+                  </div>
+                {{/if}}
+              </td>
             {{/each}}
-            </tbody>
-        </table>
+          </tr>
         {{/each}}
-    </div>
+        </tbody>
+      </table>
+    {{/each}}
+  </div>
 
-    <div class="tab-pane fade" id="tabs-display"
-         role="tabpanel" aria-labelledby="tabs-display"
-    >
-        <div class="container">
-            <h3 class="text-center">Display subjects</h3>
-            <div class="table-responsive mb-5">
-                <table class="table table-hover align-middle table-sm">
-                    <thead class="table-info align-middle">
-                        <tr>
-                            <th>#</th>
-                            <th>Time</th>
-                            <th>Subject</th>
-                            <th>Teacher</th>
-                            <th>Class Room</th>
-                            <th>Weekday</th>
-                            <th>Week</th>
-                            <th>Group</th>
-                        </tr>
-                    </thead>
-                    <tbody class="display-subjects">
-                    {{#each schedule }}
-                        <tr data-subject-id="{{ this._id }}" class="cursor-pointer {{#if this.show }}table-dark{{/if}}">
-                            <td>{{ increment @index }}</td>
-                            <td>{{ this.time }}</td>
-                            <td>{{{ this.subject }}}</td>
-                            <td>{{{ displayArray this.teacher ', ' }}}</td>
-                            <td>{{ this.classRoom }}</td>
-                            <td>{{ numberToEnglishDay this.weekday }}</td>
-                            <td>{{ this.week }}</td>
-                            <td>{{ displayArray this.groups ', ' }}</td>
-                        </tr>
-                    {{/each}}
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <div class="tab-pane fade" id="tabs-display"
+       role="tabpanel" aria-labelledby="tabs-display"
+  >
+    <div class="container">
+      <h3 class="text-center">Display subjects</h3>
+      <div class="table-responsive mb-5">
+        <table class="table table-hover align-middle table-sm">
+          <thead class="table-info align-middle">
+          <tr>
+            <th>#</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Teacher</th>
+            <th>Class Room</th>
+            <th>Weekday</th>
+            <th>Week</th>
+            <th>Group</th>
+          </tr>
+          </thead>
+          <tbody class="display-subjects">
+          {{#each schedule }}
+            <tr data-subject-id="{{ this._id }}" class="cursor-pointer {{#if this.show }}table-dark{{/if}}">
+              <td>{{ increment @index }}</td>
+              <td>{{ this.time }}</td>
+              <td>{{{ this.subject }}}</td>
+              <td>{{{ displayArray this.teacher ', ' }}}</td>
+              <td>{{ this.classRoom }}</td>
+              <td>{{ numberToEnglishDay this.weekday }}</td>
+              <td>{{ this.week }}</td>
+              <td>{{ displayArray this.groups ', ' }}</td>
+            </tr>
+          {{/each}}
+          </tbody>
+        </table>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Tabs content -->
 

@@ -1,22 +1,22 @@
 {{#if tasks}}
-    {{> multiple-select }}
-    {{> tasks tasks=tasks buttons=true }}
+  {{> multiple-select }}
+  {{> tasks tasks=tasks buttons=true }}
 {{ else }}
-    <h3 class="text-center text-light bg-success py-3">There are no tasks</h3>
+  <h3 class="text-center text-light bg-success py-3">There are no tasks</h3>
 {{/if }}
 
 {{#if tasksCompleted }}
-    <hr>
-    <h3 class="text-center text-light bg-info py-3">
-        The latter are completed
-        <span class="fs-5">({{ countDaysDisplayLastCompletedTasks }} days)</span>
-    </h3>
-    {{> tasks tasks=tasksCompleted isDraggableTasks=false isTaskCompleted=true buttons=true }}
+  <hr>
+  <h3 class="text-center text-light bg-info py-3">
+    The latter are completed
+    <span class="fs-5">({{ countDaysDisplayLastCompletedTasks }} days)</span>
+  </h3>
+  {{> tasks tasks=tasksCompleted isDraggableTasks=false isTaskCompleted=true buttons=true }}
 {{/if }}
 
 {{#if (comparison tasks '||' tasksCompleted) }}
-    {{> modal-edit-task }}
-    {{> modal-delete-task }}
+  {{> modal-edit-task }}
+  {{> modal-delete-task }}
 {{/if}}
 
 <script src="/static/js/change-color.js"></script>

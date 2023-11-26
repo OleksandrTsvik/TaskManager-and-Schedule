@@ -1,64 +1,68 @@
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-3{{#if (comparison isDraggableTasks '!==' false) }} container-draggable{{/if}}">
-    {{#each tasks }}
-        <div class="wrapper-card" data-task-id="{{ this._id }}">
-            <div class="card border border-primary shadow-0" style="background-color: {{ this.backgroundColor }}; color: {{ this.color }};">
-                <div class="card-header{{#if (comparison ../isDraggableTasks '!==' false) }} d-flex align-content-center justify-content-between{{/if}}">
-                    <h5 class="card-title m-0">{{ this.title }}</h5>
-                    {{#if (comparison ../isDraggableTasks '!==' false) }}
-                        <div class="grip-draggable"><i class="fas fa-grip-horizontal fa-lg"></i></div>
-                    {{/if}}
-                </div>
-                <div class="card-body">
-                    <p class="card-text">{{{ breaklines this.description }}}</p>
-                </div>
-                {{#if ../buttons }}
-                    <div class="card-footer d-flex justify-content-between align-items-center gap-05">
-                        <div class="date">{{dateFormat this.dateCreation "DD.MM.YYYY HH:mm"}}</div>
-                        <div class="buttons d-flex flex-wrap justify-content-end align-items-center gap-05">
-                            {{#if ../isTaskCompleted }}
-                                <button class="btn btn-outline-warning btn-floating btn-not-completed">
-                                    <i class="fas fa-times fa-lg"></i>
-                                </button>
-                            {{ else }}
-                                <button class="btn btn-outline-success btn-floating btn-completed">
-                                    <i class="fas fa-check fa-lg"></i>
-                                </button>
-                            {{/if}}
-                            <button class="btn btn-outline-primary btn-floating btn-edit"
-                                    data-mdb-toggle="modal"
-                                    data-mdb-target="#modal-edit-task"
-                            >
-                                <i class="fas fa-pencil-alt fa-lg"></i>
-                            </button>
-                            <button class="btn btn-outline-danger btn-floating btn-delete"
-                                    data-mdb-toggle="modal"
-                                    data-mdb-target="#modal-delete-task"
-                            >
-                                <i class="far fa-trash-alt fa-lg"></i>
-                            </button>
-                            <button class="btn btn-secondary btn-floating btn-collapsible">
-                                <i class="fas fa-brush fa-lg"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="collapsible px-4 py-2">
-                        <div class="d-flex gap-05 mb-3 pb-3 container-text-color" style="border-bottom-color: {{ this.color }} !important;">
-                            <span class="text-nowrap">Колір тексту:</span>
-                            <div class="d-flex justify-content-between flex-column w-100">
-                                <div class="colors-used"></div>
-                                <input type="color" value="{{ this.color }}" class="w-100 text-color" />
-                            </div>
-                        </div>
-                        <div class="d-flex gap-05 container-background-color">
-                            <span class="text-nowrap">Колір фону:</span>
-                            <div class="d-flex justify-content-between flex-column w-100">
-                                <div class="colors-used"></div>
-                                <input type="color" value="{{ this.backgroundColor }}" class="w-100 background-color" />
-                            </div>
-                        </div>
-                    </div>
-                {{/if}}
-            </div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 m-3{{#if
+  (comparison isDraggableTasks '!==' false) }} container-draggable{{/if}}">
+  {{#each tasks }}
+    <div class="wrapper-card" data-task-id="{{ this._id }}">
+      <div class="card border border-primary shadow-0"
+           style="background-color: {{ this.backgroundColor }}; color: {{ this.color }};">
+        <div class="card-header{{#if
+          (comparison ../isDraggableTasks '!==' false) }} d-flex align-content-center justify-content-between{{/if}}">
+          <h5 class="card-title m-0">{{ this.title }}</h5>
+          {{#if (comparison ../isDraggableTasks '!==' false) }}
+            <div class="grip-draggable"><i class="fas fa-grip-horizontal fa-lg"></i></div>
+          {{/if}}
         </div>
-    {{/each }}
+        <div class="card-body">
+          <p class="card-text">{{{ breaklines this.description }}}</p>
+        </div>
+        {{#if ../buttons }}
+          <div class="card-footer d-flex justify-content-between align-items-center gap-05">
+            <div class="date">{{dateFormat this.dateCreation "DD.MM.YYYY HH:mm"}}</div>
+            <div class="buttons d-flex flex-wrap justify-content-end align-items-center gap-05">
+              {{#if ../isTaskCompleted }}
+                <button class="btn btn-outline-warning btn-floating btn-not-completed">
+                  <i class="fas fa-times fa-lg"></i>
+                </button>
+              {{ else }}
+                <button class="btn btn-outline-success btn-floating btn-completed">
+                  <i class="fas fa-check fa-lg"></i>
+                </button>
+              {{/if}}
+              <button class="btn btn-outline-primary btn-floating btn-edit"
+                      data-mdb-toggle="modal"
+                      data-mdb-target="#modal-edit-task"
+              >
+                <i class="fas fa-pencil-alt fa-lg"></i>
+              </button>
+              <button class="btn btn-outline-danger btn-floating btn-delete"
+                      data-mdb-toggle="modal"
+                      data-mdb-target="#modal-delete-task"
+              >
+                <i class="far fa-trash-alt fa-lg"></i>
+              </button>
+              <button class="btn btn-secondary btn-floating btn-collapsible">
+                <i class="fas fa-brush fa-lg"></i>
+              </button>
+            </div>
+          </div>
+          <div class="collapsible px-4 py-2">
+            <div class="d-flex gap-05 mb-3 pb-3 container-text-color"
+                 style="border-bottom-color: {{ this.color }} !important;">
+              <span class="text-nowrap">Колір тексту:</span>
+              <div class="d-flex justify-content-between flex-column w-100">
+                <div class="colors-used"></div>
+                <input type="color" value="{{ this.color }}" class="w-100 text-color" />
+              </div>
+            </div>
+            <div class="d-flex gap-05 container-background-color">
+              <span class="text-nowrap">Колір фону:</span>
+              <div class="d-flex justify-content-between flex-column w-100">
+                <div class="colors-used"></div>
+                <input type="color" value="{{ this.backgroundColor }}" class="w-100 background-color" />
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  {{/each }}
 </div>
