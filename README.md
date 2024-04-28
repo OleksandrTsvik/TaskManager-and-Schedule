@@ -1,5 +1,7 @@
 # TaskManager and Schedule
 
+### &#9940; DEPRECATED Schedule: now to access the schedule in ztu.edu.ua you need to go through authorization.
+
 ## Quick Start
 
 Install dependencies:
